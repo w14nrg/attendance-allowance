@@ -52,10 +52,20 @@
         .video h1, .video h3 {
             color: white !important;
         }
-        /* REMOVE TAPS BACKGROUND FROM THE ORANGE FACT SECTION UNDER KEY FACTS */
+        /* Remove taps background from Fact section under key facts */
         .fact {
             background-image: none !important;
             background-color: #FF6600 !important;
+        }
+        /* Make testimonial boxes orange-themed instead of blue/light */
+        .testimonial-text {
+            background-color: #fff8f2 !important; /* very light orange tint */
+            border: 1px solid #ffe0cc !important; /* subtle orange border */
+            border-left: 5px solid #FF6600 !important; /* strong orange accent */
+            color: #333 !important;
+        }
+        .testimonial-text p {
+            color: #333 !important;
         }
         @media (max-width: 767px) {
             .display-3 { font-size: 2rem !important; }
@@ -217,7 +227,7 @@
         </div>
     </div>
     <!-- About End -->
-    <!-- Stats Section (Key Facts) -->
+    <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="text-center">
@@ -274,7 +284,7 @@
         </div>
     </div>
     <!-- Stats End -->
-    <!-- Fact Start - taps photo removed (plain orange now) -->
+    <!-- Fact Start - taps removed -->
     <div class="container-fluid fact my-5 py-5" style="background-color: #FF6600;">
         <div class="container">
             <div class="row g-4">
@@ -394,7 +404,7 @@
         </div>
     </div>
     <!-- Booking End -->
-    <!-- Testimonial Start -->
+    <!-- Testimonial Start - now orange boxes -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
@@ -403,7 +413,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                    <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
                     <div class="mb-2">
@@ -417,7 +427,7 @@
                     <p class="m-0">Client, London</p>
                 </div>
                 <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                    <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"Excellent Pension Credit support – got the extra money I was entitled to. Friendly and efficient service."</p>
                     </div>
                     <div class="mb-2">
@@ -431,7 +441,7 @@
                     <p class="m-0">Client, UK</p>
                 </div>
                 <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                    <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"Blue Badge application handled smoothly – no stress at all. Thank you!"</p>
                     </div>
                     <div class="mb-2">
@@ -445,7 +455,7 @@
                     <p class="m-0">Client, England</p>
                 </div>
                 <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                    <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"Helped unlock thousands in benefits – simple and effective process."</p>
                     </div>
                     <div class="mb-2">
@@ -462,7 +472,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
-    <!-- FAQ Start -->
+    <!-- FAQ Start - ALL FAQ ITEMS RESTORED -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
@@ -482,7 +492,78 @@
                         </div>
                     </div>
                 </div>
-                <!-- remaining FAQ items unchanged -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Do I have to pay anything upfront?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No. There are no upfront or initial fees. You only pay a one-time fee if your claim is successful, and in most cases this is covered by the backdated payment you receive from the Department for Work and Pensions.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How long does it take?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We usually prepare and submit applications within 48 hours of receiving all necessary information. The Department for Work and Pensions then processes the claim – timescales vary but backdated payments are often awarded.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What is Pension Credit?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Pension Credit is a means-tested benefit that tops up the income of people over State Pension age. It can also provide access to other support such as Winter Fuel Payment and help with housing costs. Average award is around £3,900 per year.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Can you help with Blue Badge applications?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes – we offer guidance and support for Blue Badge applications for people with mobility difficulties, helping with forms and evidence requirements.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Is there a free eligibility check?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes – we offer a completely free, no-obligation eligibility check over the phone or via enquiry form. It takes just a few minutes and helps identify which benefits you may be entitled to.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            How successful are your claims?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We achieve a very high success rate (around 99%) compared to self-applications (around 40%). Our experience helps avoid common mistakes and ensures all supporting information is included.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
