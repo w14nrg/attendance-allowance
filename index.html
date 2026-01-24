@@ -42,10 +42,15 @@
         .header-carousel .owl-carousel-item .position-absolute { min-height: 500px; display: flex; align-items: center; }
         .service-carousel .bg-light { min-height: 400px; }
         .testimonial-carousel .testimonial-text { min-height: 150px; }
-        /* Force plain backgrounds - no images */
-        .fact, .video {
+        /* Fix banner above enquiry form - orange background, white text */
+        .video {
+            background-color: #FF6600 !important;
             background-image: none !important;
-            background-color: #f8f9fa !important; /* plain light gray */
+            padding: 100px 0 !important;
+            color: white !important;
+        }
+        .video h1, .video h3 {
+            color: white !important;
         }
         @media (max-width: 767px) {
             .display-3 { font-size: 2rem !important; }
@@ -266,29 +271,29 @@
         </div>
     </div>
     <!-- Stats End -->
-    <!-- Fact Start (plain background) -->
-    <div class="container-fluid fact my-5 py-5" style="background-color: #f8f9fa;">
+    <!-- Fact Start (plain orange/gray background) -->
+    <div class="container-fluid fact my-5 py-5" style="background-color: #FF6600;">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <i class="fas fa-hand-holding-usd fa-2x text-primary mb-3"></i>
-                    <h2 class="mb-2">Attendance Allowance</h2>
-                    <p>Extra financial support for over 66s needing help with daily living due to illness or disability – worth up to £5,741 per year. We manage the entire claim process.</p>
+                    <i class="fas fa-hand-holding-usd fa-2x text-white mb-3"></i>
+                    <h2 class="mb-2 text-white">Attendance Allowance</h2>
+                    <p class="text-white">Extra financial support for over 66s needing help with daily living due to illness or disability – worth up to £5,741 per year. We manage the entire claim process.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <i class="fas fa-piggy-bank fa-2x text-primary mb-3"></i>
-                    <h2 class="mb-2">Pension Credit</h2>
-                    <p>Top-up for those on low income – average award around £3,900 annually. We check eligibility and handle your application.</p>
+                    <i class="fas fa-piggy-bank fa-2x text-white mb-3"></i>
+                    <h2 class="mb-2 text-white">Pension Credit</h2>
+                    <p class="text-white">Top-up for those on low income – average award around £3,900 annually. We check eligibility and handle your application.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <i class="fas fa-parking fa-2x text-primary mb-3"></i>
-                    <h2 class="mb-2">Blue Badge</h2>
-                    <p>Parking permit for people with mobility difficulties – we provide complete application support.</p>
+                    <i class="fas fa-parking fa-2x text-white mb-3"></i>
+                    <h2 class="mb-2 text-white">Blue Badge</h2>
+                    <p class="text-white">Parking permit for people with mobility difficulties – we provide complete application support.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fas fa-search fa-2x text-primary mb-3"></i>
-                    <h2 class="mb-2">Free Eligibility Check</h2>
-                    <p>Quick, no-obligation conversation to discover which benefits you could receive – call today.</p>
+                    <i class="fas fa-search fa-2x text-white mb-3"></i>
+                    <h2 class="mb-2 text-white">Free Eligibility Check</h2>
+                    <p class="text-white">Quick, no-obligation conversation to discover which benefits you could receive – call today.</p>
                 </div>
             </div>
         </div>
