@@ -11,7 +11,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme Override -->
+    <!-- Color Scheme & Font Overrides -->
     <style>
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
@@ -43,6 +43,18 @@
         .service-carousel .bg-light { min-height: 400px; }
         .testimonial-carousel .testimonial-text { min-height: 150px; }
         .navbar-brand img { height: 60px; width: auto; }
+        /* Better contact font in topbar */
+        .topbar-contact {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .topbar-phone {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #FF6600;
+        }
         @media (max-width: 767px) {
             .navbar-brand img { height: 40px !important; }
             .display-3 { font-size: 2rem !important; }
@@ -57,19 +69,15 @@
             .accordion-item .accordion-button { font-size: 1rem; }
             table.table { font-size: 0.9rem; }
             table.table td, table.table th { padding: 0.5rem; }
-            .page-header .display-3 { font-size: 2rem; }
-            .form-floating label { font-size: 0.9rem; }
-            .d-flex.align-items-center.mb-3 img { width: 40px; height: 40px; }
-            .copyright .row { flex-direction: column; text-align: center; }
+            .topbar-phone { font-size: 1.2rem; }
         }
         .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label { opacity: 0.65; transform: scale(.85) translateY(-.75rem) translateX(.15rem); }
-        .form-floating > .form-control:-webkit-autofill ~ label { opacity: 0.65; transform: scale(.85) translateY(-.75rem) translateX(.15rem); }
         body { overflow-x: hidden; }
         .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
         .row { margin-left: -15px; margin-right: -15px; }
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
     </style>
-    <!-- Local Business Schema -->
+    <!-- Local Business Schema (no address) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,18 +86,6 @@
       "image": "https://yourdomain.com/img/logo.jpg",
       "priceRange": "$$",
       "telephone": "020 7122 8324",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "33 gunterstone rd",
-        "addressLocality": "london",
-        "postalCode": "w14 9bp",
-        "addressCountry": "GB"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.4912,
-        "longitude": -0.2075
-      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -111,28 +107,31 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
-            <div class="col-lg-3 col-md-12 text-center text-lg-start">
-                <a href="" class="navbar-brand m-0 p-0">
-                    <h2 class="text-primary m-0">Claim For Me</h2>
+            <div class="col-lg-6 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0 d-flex align-items-center">
+                    <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 60px; width: auto;">
+                    <h1 class="ms-3 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
                 </a>
             </div>
-            <div class="col-lg-9 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                    <p class="m-0">33 gunterstone rd london w14 9bp</p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="far fa-envelope-open text-primary me-2"></i>
-                    <p class="m-0">info@claimforme.co.uk</p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank" title="WhatsApp us for quick help!">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+            <div class="col-lg-6 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center topbar-contact">
+                    <div class="me-5">
+                        <p class="mb-0">Call us anytime</p>
+                        <p class="mb-0 topbar-phone">020 7122 8324</p>
+                    </div>
+                    <div class="me-4">
+                        <i class="far fa-envelope-open text-primary me-2"></i>
+                        <span>info@claimforme.co.uk</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank" title="WhatsApp us for quick help!">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,7 +141,8 @@
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="text-primary m-0">Claim For Me</h1>
+                <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 40px; width: auto;">
+                <h1 class="ms-2 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -153,24 +153,6 @@
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="free-check.html" class="nav-item nav-link">Free Check</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
-                        <i class="fa fa-phone-alt text-primary"></i>
-                    </div>
-                    <div class="ms-3">
-                        <p class="mb-1 text-white">Call us 24/7</p>
-                        <h5 class="m-0 text-secondary">020 7122 8324</h5>
-                    </div>
-                </div>
-                <div class="mt-4 mt-lg-0 ms-lg-3 py-3 px-4 bg-success d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
-                        <i class="fab fa-whatsapp text-success"></i>
-                    </div>
-                    <div class="ms-3">
-                        <p class="mb-1 text-white">Message us</p>
-                        <h5 class="m-0 text-white"><a href="https://wa.me/442071228324" class="text-white text-decoration-none" target="_blank">WhatsApp</a></h5>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -333,6 +315,7 @@
         </div>
     </div>
     <!-- Fact End -->
+    <!-- Services Carousel -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
             <div class="col-lg-3 d-none d-lg-flex">
@@ -382,7 +365,6 @@
             </div>
         </div>
     </div>
-    <!-- Service End -->
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
@@ -595,7 +577,6 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>London, UK – Nationwide Support for Benefits Over 66</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
                     <div class="d-flex pt-2">
