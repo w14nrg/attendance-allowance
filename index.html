@@ -5,7 +5,7 @@
     <title>Claim Attendance Allowance & Pension Credit | Expert Help Over 66 | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
-    <meta name="description" content="Expert help to claim Attendance Allowance, Pension Credit & Blue Badge for people over 66. No upfront fees – pay only if successful (often covered by back payments). 99% success rate, 48-hour turnaround. Call 020 7122 8324 for free eligibility check.">
+    <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <!-- Google Web Fonts -->
@@ -24,7 +24,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme Override (exact same as original) -->
+    <!-- Color Scheme Override -->
     <style>
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
@@ -69,41 +69,34 @@
         .row { margin-left: -15px; margin-right: -15px; }
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
     </style>
-    <!-- SEO Schema -->
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "name": "Claim For Me",
-          "url": "https://claimforme.co.uk",
-          "logo": "img/logo.jpg",
-          "description": "Expert help claiming Attendance Allowance, Pension Credit and Blue Badge for people over 66 in the UK – no upfront fees, success-based.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "020 7122 8324",
-            "contactType": "customer service",
-            "areaServed": "GB"
-          }
-        },
-        {
-          "@type": "Service",
-          "serviceType": "Attendance Allowance Claim Help",
-          "provider": {"@type": "Organization", "name": "Claim For Me"},
-          "areaServed": "GB",
-          "description": "Professional assistance to claim Attendance Allowance (up to £5,741 p.a.), Pension Credit (avg £3,900 p.a.), Blue Badge – no upfront fees.",
-          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {"@type": "Question", "name": "How do I claim Attendance Allowance?", "acceptedAnswer": {"@type": "Answer", "text": "We handle the full claim process – eligibility check, paperwork, submission. No upfront fees – pay only if successful."}},
-            {"@type": "Question", "name": "What is Pension Credit?", "acceptedAnswer": {"@type": "Answer", "text": "Means-tested benefit boosting State Pension income (avg £3,900 p.a.). We assist with eligibility and application."}},
-            {"@type": "Question", "name": "Can I get a Blue Badge?", "acceptedAnswer": {"@type": "Answer", "text": "Yes – parking/mobility permit for those with difficulties. We provide application support."}}
-          ]
-        }
-      ]
+      "@type": "LocalBusiness",
+      "name": "Claim For Me",
+      "image": "https://yourdomain.com/img/logo.jpg",
+      "priceRange": "$$",
+      "telephone": "020 7122 8324",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "33 gunterstone rd",
+        "addressLocality": "london",
+        "postalCode": "w14 9bp",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.4912,
+        "longitude": -0.2075
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": ["https://facebook.com/yourpage", "https://twitter.com/yourhandle"]
     }
     </script>
 </head>
@@ -118,18 +111,28 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
-            <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                <a href="" class="navbar-brand m-0 p-0 d-flex align-items-center">
-                    <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 60px; width: auto;">
-                    <h1 class="ms-3 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0">
+                    <h2 class="text-primary m-0">Claim For Me</h2>
                 </a>
             </div>
-            <div class="col-lg-6 col-md-12 text-end">
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                    <p class="m-0">33 gunterstone rd london w14 9bp</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-primary me-2"></i>
+                    <p class="m-0">info@claimforme.co.uk</p>
+                </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank" title="WhatsApp us for quick help!">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -139,8 +142,7 @@
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 40px; width: auto;">
-                <h1 class="ms-2 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
+                <h1 class="text-primary m-0">Claim For Me</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -149,9 +151,26 @@
                 <div class="navbar-nav me-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="ourwalks.html" class="nav-item nav-link">Our Services</a>
-                    <a href="donate.html" class="nav-item nav-link">Donate</a>
+                    <a href="free-check.html" class="nav-item nav-link">Free Check</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                        <i class="fa fa-phone-alt text-primary"></i>
+                    </div>
+                    <div class="ms-3">
+                        <p class="mb-1 text-white">Call us 24/7</p>
+                        <h5 class="m-0 text-secondary">020 7122 8324</h5>
+                    </div>
+                </div>
+                <div class="mt-4 mt-lg-0 ms-lg-3 py-3 px-4 bg-success d-flex align-items-center">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                        <i class="fab fa-whatsapp text-success"></i>
+                    </div>
+                    <div class="ms-3">
+                        <p class="mb-1 text-white">Message us</p>
+                        <h5 class="m-0 text-white"><a href="https://wa.me/442071228324" class="text-white text-decoration-none" target="_blank">WhatsApp</a></h5>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -160,8 +179,9 @@
     <!-- Hero Section Start -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
-            <h1 class="display-3 mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #808080;">HERE TO MAKE <span style="color: #FF6600;">CLAIMING</span> EASIER</h1>
-            <p class="fs-4 fst-italic text-secondary">Trusted help for Attendance Allowance, Pension Credit & Blue Badge – over 66</p>
+            <h1 class="display-3 mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #808080;">Making Claiming <span style="color: #FF6600;">Easier</span></h1>
+            <p class="fs-4 fst-italic text-secondary">"trusted help, better outcomes" – Attendance Allowance, Pension Credit, Blue Badge for over 66</p>
+            <a href="free-check.html" class="btn btn-primary py-3 px-5 mt-3">Start Free Eligibility Check</a>
         </div>
     </div>
     <!-- Hero Section End -->
@@ -171,7 +191,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="img/service-1.jpg" alt="Attendance Allowance claim help over 66" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="img/service-1.jpg" alt="Attendance Allowance claim help" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Attendance Allowance</h5>
@@ -179,7 +199,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="img/service-2.jpg" alt="Pension Credit claim assistance over 66" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="img/service-2.jpg" alt="Pension Credit claim assistance" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Pension Credit</h5>
@@ -187,7 +207,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="img/service-3.jpg" alt="Blue Badge application support over 66" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="img/service-3.jpg" alt="Blue Badge application support" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Blue Badge</h5>
@@ -203,25 +223,25 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">About Claim For Me</h6>
-                    <h1 class="mb-4">Helping People Over 66 Claim Attendance Allowance, Pension Credit & Blue Badge</h1>
-                    <p class="mb-4">At Claim For Me, we help people over 66 navigate and unlock government benefits. The system is confusing – we make it easy. A quick conversation identifies what you're eligible for, then we handle all paperwork and the process. No upfront fees – just a one-time fee if successful (usually covered by back-dated payments). Our goal: you're not out of pocket for the best help. Worth up to £5,741 p.a. Attendance Allowance, £3,900 p.a. Pension Credit average.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No upfront charges – success-based fee</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>99% success rate (vs 40% without help)</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>48-hour turnaround on applications</p>
+                    <h1 class="mb-4">Expert Assistance to Claim Benefits You're Entitled To</h1>
+                    <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
                         </div>
                         <div class="ms-3">
-                            <p class="fs-5 fw-medium mb-2 text-white">Call for Free Check</p>
+                            <p class="fs-5 fw-medium mb-2 text-white">Call for Free Eligibility Check</p>
                             <h3 class="m-0 text-secondary">020 7122 8324</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4" style="min-height: 500px;">
                     <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/mend-logo.png" style="object-fit: contain; padding: 0 0 50px 100px;" alt="Claim For Me Benefits Help Over 66">
-                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="https://cdn-icons-png.flaticon.com/512/5099/5099885.png" style="object-fit: contain;" alt="Benefits claim support icon">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/mend-logo.png" style="object-fit: contain; padding: 0 0 50px 100px;" alt="Claim For Me Benefits Assistance">
+                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="https://cdn-icons-png.flaticon.com/512/5099/5099885.png" style="object-fit: contain;" alt="Benefits support icon">
                     </div>
                 </div>
             </div>
@@ -232,56 +252,56 @@
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Benefits Claim Statistics</h6>
-                <h1 class="mb-5">Real Facts About Benefits Over 66</h1>
+                <h6 class="text-secondary text-uppercase">Benefits Statistics UK</h6>
+                <h1 class="mb-5">Key Facts About Unclaimed Benefits</h1>
             </div>
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Statistic</th>
                         <th>Value</th>
-                        <th>Source</th>
+                        <th>Source (latest available)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Average annual amount won for clients</td>
-                        <td>£5,000</td>
-                        <td>Claim For Me Data</td>
+                        <td>Pensioners not claiming Pension Credit they are entitled to</td>
+                        <td>Up to 880,000 households</td>
+                        <td>DWP / Age UK 2024</td>
                     </tr>
                     <tr>
-                        <td>Success rate with professional help</td>
-                        <td>99%</td>
-                        <td>Claim For Me</td>
+                        <td>Estimated unclaimed Pension Credit per year</td>
+                        <td>£1.6–£2 billion</td>
+                        <td>DWP / Institute for Fiscal Studies</td>
                     </tr>
                     <tr>
-                        <td>Success rate without help</td>
-                        <td>40%</td>
-                        <td>Claim For Me</td>
+                        <td>Attendance Allowance – average weekly award (higher rate)</td>
+                        <td>£108.55</td>
+                        <td>GOV.UK 2025/26 rates</td>
                     </tr>
                     <tr>
-                        <td>Time to turn around an application</td>
-                        <td>48 hours</td>
-                        <td>Claim For Me</td>
+                        <td>Annual value of higher rate Attendance Allowance</td>
+                        <td>£5,644.60</td>
+                        <td>GOV.UK 2025/26</td>
                     </tr>
                     <tr>
-                        <td>Attendance Allowance maximum annual value</td>
-                        <td>£5,741</td>
-                        <td>GOV.UK 2025 rates</td>
+                        <td>Average Pension Credit award (single person)</td>
+                        <td>≈ £3,900 per year</td>
+                        <td>DWP statistics</td>
                     </tr>
                     <tr>
-                        <td>Average Pension Credit annual amount</td>
-                        <td>£3,900</td>
-                        <td>Claim For Me</td>
+                        <td>Percentage of eligible pensioners not claiming Pension Credit</td>
+                        <td>≈ 40%</td>
+                        <td>DWP estimates</td>
                     </tr>
                     <tr>
-                        <td>People over 66 eligible but not claiming</td>
-                        <td>Millions</td>
-                        <td>Age UK / GOV.UK estimates</td>
+                        <td>Backdated payments possible (Attendance Allowance)</td>
+                        <td>Up to 3 months (sometimes more)</td>
+                        <td>GOV.UK guidance</td>
                     </tr>
                 </tbody>
             </table>
-            <p class="text-center mt-4">These figures show why expert help matters. We make claiming Attendance Allowance, Pension Credit & Blue Badge simple and successful. For urgent help, contact GOV.UK or Age UK.</p>
+            <p class="text-center mt-4">Millions of pounds go unclaimed every year. Professional help significantly increases success rates and speeds up the process.</p>
         </div>
     </div>
     <!-- Stats End -->
@@ -290,24 +310,24 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <i class="fas fa-brain fa-2x text-white mb-3"></i>
+                    <i class="fas fa-hand-holding-usd fa-2x text-white mb-3"></i>
                     <h2 class="text-white mb-2">Attendance Allowance</h2>
-                    <p class="text-white mb-0">Extra income for over 66s with daily difficulties from health conditions – up to £5,741 p.a. We handle the claim process.</p>
+                    <p class="text-white mb-0">Extra financial support for over 66s needing help with daily living due to illness or disability – worth up to £5,741 per year. We manage the entire claim process.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <i class="fas fa-heartbeat fa-2x text-white mb-3"></i>
+                    <i class="fas fa-piggy-bank fa-2x text-white mb-3"></i>
                     <h2 class="text-white mb-2">Pension Credit</h2>
-                    <p class="text-white mb-0">Boosts State Pension income if low – average £3,900 p.a. Expert application assistance with no upfront fees.</p>
+                    <p class="text-white mb-0">Top-up for those on low income – average award around £3,900 annually. We check eligibility and handle your application.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <i class="fas fa-user-friends fa-2x text-white mb-3"></i>
+                    <i class="fas fa-parking fa-2x text-white mb-3"></i>
                     <h2 class="text-white mb-2">Blue Badge</h2>
-                    <p class="text-white mb-0">Parking/mobility permit for drivers or passengers with difficulties – full application support.</p>
+                    <p class="text-white mb-0">Parking permit for people with mobility difficulties – we provide complete application support.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fas fa-hands-helping fa-2x text-white mb-3"></i>
+                    <i class="fas fa-search fa-2x text-white mb-3"></i>
                     <h2 class="text-white mb-2">Free Eligibility Check</h2>
-                    <p class="text-white mb-0">Quick conversation to see what benefits you're entitled to over 66 – no commitment.</p>
+                    <p class="text-white mb-0">Quick, no-obligation conversation to discover which benefits you could receive – call today.</p>
                 </div>
             </div>
         </div>
@@ -324,7 +344,7 @@
                 <div class="ms-lg-5 ps-lg-5">
                     <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="text-secondary text-uppercase">Our Services</h6>
-                        <h1 class="mb-5">Expert Help Claiming Benefits Over 66 in the UK</h1>
+                        <h1 class="mb-5">Expert Support Claiming Benefits for People Over 66</h1>
                     </div>
                     <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                         <div class="bg-light p-4">
@@ -332,30 +352,30 @@
                                 <i class="fas fa-hand-holding-heart fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3">Attendance Allowance Claim Help</h4>
-                            <p>Extra income for over 66s with health-related daily difficulties. Worth up to £5,741 p.a. We handle the full claim.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 per year</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>No means test</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Back payments possible</p>
+                            <p>Financial support for those over 66 with health-related daily living needs – up to £5,741 per year. We manage your application from start to finish.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>No means-testing</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Possible backdated payments</p>
                         </div>
                         <div class="bg-light p-4">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-wallet fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3">Pension Credit Claim Assistance</h4>
-                            <p>Boosts State Pension if income is low. Average £3,900 p.a. Full application support.</p>
+                            <p>Supplement to State Pension for those on lower incomes – average £3,900 per year. We check eligibility and complete your claim.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Average £3,900 per year</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Back-dated payments</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert eligibility check</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Backdated payments possible</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Full application support</p>
                         </div>
                         <div class="bg-light p-4">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-parking fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3">Blue Badge Application Support</h4>
-                            <p>Parking/mobility permit for drivers or passengers. We assist with the application process.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Easier parking access</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>For mobility difficulties</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Fast expert help</p>
+                            <p>Parking permit for people with mobility challenges – we guide you through the entire application process.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Improved parking access</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>For drivers and passengers</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert guidance</p>
                         </div>
                     </div>
                 </div>
@@ -363,20 +383,20 @@
         </div>
     </div>
     <!-- Service End -->
-    <!-- Donate Section (adapted for benefits theme) -->
+    <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
-            <h1 class="mb-4">Support Claim For Me</h1>
-            <p class="mb-4">Your donation helps us provide free eligibility checks and support more people over 66 claim their benefits. Every contribution counts.</p>
-            <a href="donate.html" class="btn btn-secondary py-3 px-5">Donate Now</a>
+            <h1 class="mb-4">Ready to Claim What You're Entitled To?</h1>
+            <p class="mb-4">Many people over 66 miss out on thousands of pounds every year. Start your free eligibility check today – no obligation, no upfront cost.</p>
+            <a href="free-check.html" class="btn btn-secondary py-3 px-5">Start Free Eligibility Check</a>
         </div>
     </div>
-    <!-- Donate End -->
+    <!-- Call to Action End -->
     <!-- Booking Start -->
     <div class="container-fluid my-5 px-0">
         <div class="video wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-white mb-4">Claim For Me – Benefits Over 66</h1>
-            <h3 class="text-white mb-0">Expert Claim Assistance</h3>
+            <h1 class="text-white mb-4">Claim For Me – Benefits Support Over 66</h1>
+            <h3 class="text-white mb-0">Expert Assistance Available</h3>
         </div>
         <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
             <div class="row justify-content-center">
@@ -392,7 +412,7 @@
                                     <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="enquiry" class="form-control border-0" placeholder="Your Enquiry – e.g. Attendance Allowance or Pension Credit help"></textarea>
+                                    <textarea name="enquiry" class="form-control border-0" placeholder="Your Enquiry – e.g. Attendance Allowance or Pension Credit"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Enquiry</button>
@@ -410,12 +430,12 @@
         <div class="container">
             <div class="text-center">
                 <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-5">Hear from Our Clients!</h1>
+                <h1 class="mb-5">What Our Clients Say</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">"Claim For Me handled my Attendance Allowance claim perfectly. Approved fast with back payments – huge help!"</p>
+                        <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -429,7 +449,7 @@
                 </div>
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">"Great Pension Credit assistance – got extra income I didn't know about. Friendly and quick."</p>
+                        <p class="mb-0">"Excellent Pension Credit support – got the extra money I was entitled to. Friendly and efficient service."</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -443,7 +463,7 @@
                 </div>
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">"Blue Badge application done easily with their help. No hassle at all."</p>
+                        <p class="mb-0">"Blue Badge application handled smoothly – no stress at all. Thank you!"</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -457,7 +477,7 @@
                 </div>
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">"Unlocked thousands in benefits. Worth it – simple and effective."</p>
+                        <p class="mb-0">"Helped unlock thousands in benefits – simple and effective process."</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -473,13 +493,111 @@
         </div>
     </div>
     <!-- Testimonial End -->
+    <!-- FAQ Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Frequently Asked Questions</h6>
+                <h1 class="mb-5">Common Questions About Claiming Benefits Over 66</h1>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is Attendance Allowance?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Attendance Allowance is a tax-free benefit for people over State Pension age who need help with personal care due to illness or disability. It is worth up to £108.55 per week (2025/26 higher rate), and there is no means test.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Do I have to pay anything upfront?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No. There are no upfront or initial fees. You only pay a one-time fee if your claim is successful, and in most cases this is covered by the backdated payment you receive from the Department for Work and Pensions.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How long does it take?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We usually prepare and submit applications within 48 hours of receiving all necessary information. The Department for Work and Pensions then processes the claim – timescales vary but backdated payments are often awarded.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What is Pension Credit?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Pension Credit is a means-tested benefit that tops up the income of people over State Pension age. It can also provide access to other support such as Winter Fuel Payment and help with housing costs. Average award is around £3,900 per year.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Can you help with Blue Badge applications?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes – we offer guidance and support for Blue Badge applications for people with mobility difficulties, helping with forms and evidence requirements.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Is there a free eligibility check?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes – we offer a completely free, no-obligation eligibility check over the phone or via enquiry form. It takes just a few minutes and helps identify which benefits you may be entitled to.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            How successful are your claims?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We achieve a very high success rate (around 99%) compared to self-applications (around 40%). Our experience helps avoid common mistakes and ensures all supporting information is included.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>London, UK – Nationwide Benefits Claim Help Over 66</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>London, UK – Nationwide Support for Benefits Over 66</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -490,24 +608,24 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Opening Hours - Benefits Claim Support</h4>
                     <h6 class="text-light">Monday - Sunday:</h6>
-                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Help</p>
+                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
                     <h6 class="text-light">Holidays:</h6>
-                    <p class="mb-0">Enquiries Welcome – Expert Assistance for Benefits Over 66</p>
+                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Our Services</h4>
-                    <p class="btn btn-link">Claim Attendance Allowance</p>
-                    <p class="btn btn-link">Pension Credit Claim Help</p>
-                    <p class="btn btn-link">Blue Badge Application Support</p>
-                    <p class="btn btn-link">Free Eligibility Check</p>
-                    <p class="btn btn-link">Full Application Assistance</p>
+                    <p class="btn btn-link">Attendance Allowance Claims</p>
+                    <p class="btn btn-link">Pension Credit Applications</p>
+                    <p class="btn btn-link">Blue Badge Support</p>
+                    <p class="btn btn-link">Free Eligibility Checks</p>
+                    <p class="btn btn-link">Full Application Guidance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter - Benefits Tips Over 66</h4>
-                    <p>Subscribe for tips on claiming Attendance Allowance, Pension Credit, Blue Badge and more for over 66s.</p>
+                    <p>Subscribe for updates and tips on claiming Attendance Allowance, Pension Credit, Blue Badge and other benefits for people over State Pension age.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -516,7 +634,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance & Pension Credit Over 66 – No Upfront Fees.
+                        © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                     </div>
