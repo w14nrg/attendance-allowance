@@ -5,7 +5,6 @@
     <title>Free Eligibility Check | Claim For Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free eligibility check for Attendance Allowance, Pension Credit & Blue Badge over 66.">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
     <style>
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
@@ -28,6 +26,8 @@
         .quiz-step.active { display: block; }
         .btn-next, .btn-prev { min-width: 120px; }
         #enquiry-form { display: none; }
+        /* Override Bootstrap light blue tint */
+        .bg-light { background-color: #ffffff !important; }
     </style>
 </head>
 <body>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Topbar -->
-    <div class="container-fluid bg-light d-none d-lg-block">
+    <div class="container-fluid bg-white d-none d-lg-block">
         <div class="row align-items-center top-bar">
             <div class="col-lg-6 col-md-12 text-center text-lg-start">
                 <a href="index.html" class="navbar-brand m-0 p-0">
@@ -61,7 +61,7 @@
     </div>
 
     <!-- Navbar -->
-    <div class="container-fluid nav-bar bg-light">
+    <div class="container-fluid nav-bar bg-white">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
                 <h1 class="text-primary m-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.8rem;">Claim For Me</h1>
@@ -79,7 +79,7 @@
     </div>
 
     <!-- Hero -->
-    <div class="container-fluid bg-light py-5 mb-5">
+    <div class="container-fluid bg-white py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #808080;">Free Eligibility Check</h1>
             <p class="fs-4 fst-italic text-secondary">Answer the questions to see if you may qualify</p>
@@ -97,11 +97,11 @@
                 <div class="quiz-step active" id="step1">
                     <h4 class="mb-4">1. Are you 66 or older? (State Pension age)</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="age" id="age-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="age" id="age-yes" value="Yes">
                         <label class="form-check-label" for="age-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="age" id="age-no" value="no">
+                        <input class="form-check-input" type="radio" name="age" id="age-no" value="No">
                         <label class="form-check-label" for="age-no">No</label>
                     </div>
                     <button type="button" class="btn btn-primary py-3 px-5 mt-3 btn-next">Next →</button>
@@ -110,11 +110,11 @@
                 <div class="quiz-step" id="step2">
                     <h4 class="mb-4">2. Do you have any illness, disability or health condition?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="health" id="health-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="health" id="health-yes" value="Yes">
                         <label class="form-check-label" for="health-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="health" id="health-no" value="no">
+                        <input class="form-check-input" type="radio" name="health" id="health-no" value="No">
                         <label class="form-check-label" for="health-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -124,11 +124,11 @@
                 <div class="quiz-step" id="step3">
                     <h4 class="mb-4">3. Do you need help or supervision with washing or bathing?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="washing" id="washing-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="washing" id="washing-yes" value="Yes">
                         <label class="form-check-label" for="washing-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="washing" id="washing-no" value="no">
+                        <input class="form-check-input" type="radio" name="washing" id="washing-no" value="No">
                         <label class="form-check-label" for="washing-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -138,11 +138,11 @@
                 <div class="quiz-step" id="step4">
                     <h4 class="mb-4">4. Do you need help or supervision with getting dressed or undressed?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="dressing" id="dressing-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="dressing" id="dressing-yes" value="Yes">
                         <label class="form-check-label" for="dressing-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="dressing" id="dressing-no" value="no">
+                        <input class="form-check-input" type="radio" name="dressing" id="dressing-no" value="No">
                         <label class="form-check-label" for="dressing-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -152,11 +152,11 @@
                 <div class="quiz-step" id="step5">
                     <h4 class="mb-4">5. Do you need help or supervision with using the toilet?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="toilet" id="toilet-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="toilet" id="toilet-yes" value="Yes">
                         <label class="form-check-label" for="toilet-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="toilet" id="toilet-no" value="no">
+                        <input class="form-check-input" type="radio" name="toilet" id="toilet-no" value="No">
                         <label class="form-check-label" for="toilet-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -166,11 +166,11 @@
                 <div class="quiz-step" id="step6">
                     <h4 class="mb-4">6. Do you need help or supervision with eating or drinking?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="eating" id="eating-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="eating" id="eating-yes" value="Yes">
                         <label class="form-check-label" for="eating-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="eating" id="eating-no" value="no">
+                        <input class="form-check-input" type="radio" name="eating" id="eating-no" value="No">
                         <label class="form-check-label" for="eating-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -180,11 +180,11 @@
                 <div class="quiz-step" id="step7">
                     <h4 class="mb-4">7. Do you need someone to keep an eye on you during the day for your safety?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="supervision" id="supervision-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="supervision" id="supervision-yes" value="Yes">
                         <label class="form-check-label" for="supervision-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="supervision" id="supervision-no" value="no">
+                        <input class="form-check-input" type="radio" name="supervision" id="supervision-no" value="No">
                         <label class="form-check-label" for="supervision-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -194,11 +194,11 @@
                 <div class="quiz-step" id="step8">
                     <h4 class="mb-4">8. Have these needs lasted (or are expected to last) at least 6 months?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="duration" id="duration-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="duration" id="duration-yes" value="Yes">
                         <label class="form-check-label" for="duration-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="duration" id="duration-no" value="no">
+                        <input class="form-check-input" type="radio" name="duration" id="duration-no" value="No">
                         <label class="form-check-label" for="duration-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -208,11 +208,11 @@
                 <div class="quiz-step" id="step9">
                     <h4 class="mb-4">9. Do you live alone or with someone who cannot help with your care needs?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="living" id="living-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="living" id="living-yes" value="Yes">
                         <label class="form-check-label" for="living-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="living" id="living-no" value="no">
+                        <input class="form-check-input" type="radio" name="living" id="living-no" value="No">
                         <label class="form-check-label" for="living-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -222,11 +222,11 @@
                 <div class="quiz-step" id="step10">
                     <h4 class="mb-4">10. Do you have difficulty getting in/out of bed or a chair?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="bed-chair" id="bed-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="bed-chair" id="bed-yes" value="Yes">
                         <label class="form-check-label" for="bed-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="bed-chair" id="bed-no" value="no">
+                        <input class="form-check-input" type="radio" name="bed-chair" id="bed-no" value="No">
                         <label class="form-check-label" for="bed-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -236,11 +236,11 @@
                 <div class="quiz-step" id="step11">
                     <h4 class="mb-4">11. Do you need help communicating your needs?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="communicate" id="comm-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="communicate" id="comm-yes" value="Yes">
                         <label class="form-check-label" for="comm-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="communicate" id="comm-no" value="no">
+                        <input class="form-check-input" type="radio" name="communicate" id="comm-no" value="No">
                         <label class="form-check-label" for="comm-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -250,11 +250,11 @@
                 <div class="quiz-step" id="step12">
                     <h4 class="mb-4">12. Do you need help managing medication or treatments?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="medication" id="med-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="medication" id="med-yes" value="Yes">
                         <label class="form-check-label" for="med-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="medication" id="med-no" value="no">
+                        <input class="form-check-input" type="radio" name="medication" id="med-no" value="No">
                         <label class="form-check-label" for="med-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -264,11 +264,11 @@
                 <div class="quiz-step" id="step13">
                     <h4 class="mb-4">13. Do you have difficulty managing money or bills?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="money" id="money-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="money" id="money-yes" value="Yes">
                         <label class="form-check-label" for="money-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="money" id="money-no" value="no">
+                        <input class="form-check-input" type="radio" name="money" id="money-no" value="No">
                         <label class="form-check-label" for="money-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -278,11 +278,11 @@
                 <div class="quiz-step" id="step14">
                     <h4 class="mb-4">14. Do you need help using the telephone or online services?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="phone" id="phone-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="phone" id="phone-yes" value="Yes">
                         <label class="form-check-label" for="phone-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="phone" id="phone-no" value="no">
+                        <input class="form-check-input" type="radio" name="phone" id="phone-no" value="No">
                         <label class="form-check-label" for="phone-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
@@ -290,74 +290,74 @@
                 </div>
 
                 <div class="quiz-step" id="step15">
-                    <h4 class="mb-4">15. Do you live alone or with someone who cannot help with your care needs?</h4>
+                    <h4 class="mb-4">15. Is your weekly income below £201 (single) or £307 (couple)?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="alone" id="alone-yes" value="yes">
-                        <label class="form-check-label" for="alone-yes">Yes</label>
-                    </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="alone" id="alone-no" value="no">
-                        <label class="form-check-label" for="alone-no">No</label>
-                    </div>
-                    <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
-                    <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
-                </div>
-
-                <div class="quiz-step" id="step16">
-                    <h4 class="mb-4">16. Is your weekly income below £201 (single) or £307 (couple)?</h4>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="income-low" id="income-low-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="income-low" id="income-low-yes" value="Yes">
                         <label class="form-check-label" for="income-low-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="income-low" id="income-low-no" value="no">
+                        <input class="form-check-input" type="radio" name="income-low" id="income-low-no" value="No">
                         <label class="form-check-label" for="income-low-no">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
                     <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
                 </div>
 
-                <div class="quiz-step" id="step17">
-                    <h4 class="mb-4">17. Do you have savings or capital over £16,000?</h4>
+                <div class="quiz-step" id="step16">
+                    <h4 class="mb-4">16. Do you have savings or capital over £16,000?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="capital" id="capital-high" value="high">
+                        <input class="form-check-input" type="radio" name="capital" id="capital-high" value="Over £16,000">
                         <label class="form-check-label" for="capital-high">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="capital" id="capital-low" value="low">
+                        <input class="form-check-input" type="radio" name="capital" id="capital-low" value="Under £16,000">
                         <label class="form-check-label" for="capital-low">No</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
                     <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
                 </div>
 
-                <div class="quiz-step" id="step18">
-                    <h4 class="mb-4">18. Do you have severe difficulty walking or moving around?</h4>
+                <div class="quiz-step" id="step17">
+                    <h4 class="mb-4">17. Do you have severe difficulty walking or moving around?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="walking" id="walking-severe" value="severe">
+                        <input class="form-check-input" type="radio" name="walking" id="walking-severe" value="Severe">
                         <label class="form-check-label" for="walking-severe">Severe difficulty</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="walking" id="walking-moderate" value="moderate">
+                        <input class="form-check-input" type="radio" name="walking" id="walking-moderate" value="Moderate">
                         <label class="form-check-label" for="walking-moderate">Moderate difficulty</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="walking" id="walking-none" value="none">
+                        <input class="form-check-input" type="radio" name="walking" id="walking-none" value="None">
                         <label class="form-check-label" for="walking-none">No difficulty</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
                     <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
                 </div>
 
-                <div class="quiz-step" id="step19">
-                    <h4 class="mb-4">19. Do you use any aids or appliances for mobility?</h4>
+                <div class="quiz-step" id="step18">
+                    <h4 class="mb-4">18. Do you use any aids or appliances for mobility?</h4>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="aids" id="aids-yes" value="yes">
+                        <input class="form-check-input" type="radio" name="aids" id="aids-yes" value="Yes">
                         <label class="form-check-label" for="aids-yes">Yes</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="aids" id="aids-no" value="no">
+                        <input class="form-check-input" type="radio" name="aids" id="aids-no" value="No">
                         <label class="form-check-label" for="aids-no">No</label>
+                    </div>
+                    <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
+                    <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
+                </div>
+
+                <div class="quiz-step" id="step19">
+                    <h4 class="mb-4">19. Do you live alone or receive no regular help from family/friends with care needs?</h4>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="support" id="support-yes" value="Yes">
+                        <label class="form-check-label" for="support-yes">Yes</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="support" id="support-no" value="No">
+                        <label class="form-check-label" for="support-no">No (I have regular help)</label>
                     </div>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
                     <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
@@ -365,7 +365,7 @@
 
                 <div class="quiz-step" id="step20">
                     <h4 class="mb-4">20. Any other relevant health or care needs? (optional)</h4>
-                    <textarea class="form-control mb-4" name="other" rows="3" placeholder="E.g. dementia, arthritis, frequent falls..."></textarea>
+                    <textarea class="form-control mb-4" name="other" rows="3" placeholder="E.g. dementia, arthritis, frequent falls, stroke recovery..."></textarea>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">Back</button>
                     <button type="button" class="btn btn-primary py-3 px-5" id="submit-quiz">Submit & See Results</button>
                 </div>
@@ -373,32 +373,41 @@
                 <div class="quiz-step" id="result">
                     <h4 class="mb-4 text-primary">Your Results</h4>
                     <div id="results-content" class="alert alert-info mb-4">
-                        <p>We will review your answers and be in touch if you are likely to be eligible for any of these benefits.</p>
-                        <p>Thank you for completing the check. We will contact you soon if you appear to qualify.</p>
+                        <p>Thank you for completing the check.</p>
+                        <p>We will review your answers and be in touch soon if you appear likely to qualify for Attendance Allowance, Pension Credit, or Blue Badge support.</p>
                     </div>
-                    <p class="mb-4">For immediate help call <strong>020 7122 8324</strong>.</p>
+                    <p class="mb-4">For immediate help call <strong>020 7122 8324</strong> or WhatsApp us.</p>
                     <button type="button" class="btn btn-secondary py-3 px-5 me-3" id="restart-btn">Restart Quiz</button>
                 </div>
             </form>
 
             <div id="enquiry-form" class="mt-5">
                 <h4 class="mb-4 text-primary">Send Your Results to Us</h4>
-                <p class="mb-4">We'll email you the summary and be in touch if you are likely to be eligible.</p>
-                <form action="mailto:claimsformeuk@gmail.com" method="post" enctype="text/plain">
+                <p class="mb-4">We'll review your answers and contact you if you're likely eligible. Your details are kept confidential.</p>
+                
+                <form action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
+                    <!-- Anti-spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Free Eligibility Check Submission">
+
                     <div class="form-group mb-4">
-                        <input type="text" class="form-control py-3" name="name" placeholder="Your Name" required>
+                        <input type="text" class="form-control py-3" name="name" placeholder="Your Full Name" required>
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control py-3" name="email" placeholder="Your Email" required>
+                        <input type="email" class="form-control py-3" name="email" placeholder="Your Email Address" required>
                     </div>
                     <div class="form-group mb-4">
-                        <input type="tel" class="form-control py-3" name="phone" placeholder="Your Phone" required>
+                        <input type="tel" class="form-control py-3" name="phone" placeholder="Your Phone Number" required>
                     </div>
+
+                    <textarea class="form-control py-3 mb-4" name="quiz_answers" id="quiz-summary" rows="10" readonly placeholder="Your answers will be inserted here automatically..."></textarea>
+
                     <div class="form-group mb-4">
-                        <textarea class="form-control py-3" name="extra" rows="4" placeholder="Any extra details..."></textarea>
+                        <textarea class="form-control py-3" name="extra" rows="4" placeholder="Any additional comments or questions..."></textarea>
                     </div>
-                    <input type="hidden" name="subject" value="Free Eligibility Check Results">
-                    <button type="submit" class="btn btn-primary py-3 px-5 w-100">Send Results & Get Help</button>
+
+                    <button type="submit" class="btn btn-primary py-3 px-5 w-100">Send Results & Request Help</button>
                 </form>
             </div>
         </div>
@@ -410,7 +419,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
@@ -419,11 +428,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours - Benefits Claim Support</h4>
+                    <h4 class="text-light mb-4">Opening Hours</h4>
                     <h6 class="text-light">Monday - Sunday:</h6>
-                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
+                    <p class="mb-4">Flexible – Call Anytime</p>
                     <h6 class="text-light">Holidays:</h6>
-                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
+                    <p class="mb-0">Enquiries Welcome</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Our Services</h4>
@@ -434,8 +443,8 @@
                     <p class="btn btn-link">Full Application Guidance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter - Benefits Tips Over 66</h4>
-                    <p>Subscribe for updates and tips on claiming Attendance Allowance, Pension Credit, Blue Badge and other benefits for people over State Pension age.</p>
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe for tips on claiming benefits over State Pension age.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
@@ -445,13 +454,13 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-md-8 text-center">
                     <h5 class="text-light mb-3">Don't miss out on benefits you're entitled to</h5>
-                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year. Get your free eligibility check today.</p>
-                    <a href="free-check.html" class="btn btn-outline-primary py-3 px-5 mt-2">Start Free Eligibility Check</a>
+                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year.</p>
+                    <a href="free-check.html" class="btn btn-outline-primary py-3 px-5 mt-2">Start Free Check</a>
                 </div>
             </div>
             <div class="container mt-5">
                 <div class="copyright text-center">
-                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
+                    © Claim For Me. All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge – No Upfront Fees.
                 </div>
             </div>
         </div>
@@ -475,17 +484,19 @@
         function showStep(n) {
             steps.forEach(s => s.classList.remove('active'));
             steps[n].classList.add('active');
-            progressBar.style.width = ((n + 1) * (100 / steps.length)) + '%';
+            const progress = (n / (steps.length - 2)) * 100; // exclude result step
+            progressBar.style.width = progress + '%';
         }
 
         document.querySelectorAll('.btn-next').forEach(btn => {
             btn.addEventListener('click', () => {
-                const checked = btn.closest('.quiz-step').querySelector('input:checked');
-                if (btn.closest('.quiz-step').querySelectorAll('input[type="radio"]').length > 0 && !checked) {
-                    alert('Please select Yes or No to continue.');
+                const step = btn.closest('.quiz-step');
+                const checked = step.querySelector('input[type="radio"]:checked');
+                if (step.querySelectorAll('input[type="radio"]').length > 0 && !checked) {
+                    alert('Please select an option to continue.');
                     return;
                 }
-                if (currentStep < steps.length - 1) {
+                if (currentStep < steps.length - 2) { // stop before result
                     currentStep++;
                     showStep(currentStep);
                 }
@@ -502,15 +513,37 @@
         });
 
         document.getElementById('submit-quiz').addEventListener('click', () => {
+            // Build summary
+            const form = document.getElementById('eligibility-form');
+            const data = new FormData(form);
+            let summary = "Eligibility Check Results:\n\n";
+
+            data.forEach((value, key) => {
+                if (value && key !== 'other') {
+                    const question = key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    summary += `${question}: ${value}\n`;
+                }
+            });
+
+            const other = data.get('other')?.trim();
+            if (other) {
+                summary += `\nOther relevant information:\n${other}\n`;
+            }
+
+            document.getElementById('quiz-summary').value = summary.trim();
+
+            // Show result + form
             currentStep = steps.length - 1;
             showStep(currentStep);
             enquirySection.style.display = 'block';
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
 
         document.getElementById('restart-btn').addEventListener('click', () => {
             currentStep = 0;
             showStep(0);
             document.getElementById('eligibility-form').reset();
+            document.getElementById('quiz-summary').value = '';
             enquirySection.style.display = 'none';
         });
     </script>
