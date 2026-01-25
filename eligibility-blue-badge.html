@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Blue Badge Eligibility Quiz | Parking Permit Support | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <meta name="description" content="Free 25-question Blue Badge eligibility quiz. Strong cases only – expert review and follow-up.">
+    <meta name="description" content="Free 25-question Blue Badge eligibility quiz. Answers reviewed by experts – no obligation, success-based fee from £99.">
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
     <!-- Google Web Fonts -->
@@ -107,12 +107,11 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <!-- Hero Start -->
+    <!-- Hero Start - Back to original text -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-4">Blue Badge<br><span class="text-primary">25-Question Eligibility Quiz</span></h1>
-            <p class="fs-4 mb-4">Quick preliminary check – we only follow up on strong cases.</p>
-            <p class="fst-italic text-secondary">This is an estimate only – final decision by your local council.</p>
+            <p class="fs-4 mb-4">Your answers will be emailed to our experts for free review and follow-up call.</p>
             <a href="tel:02071228324" class="btn btn-primary py-3 px-5">Call Now: 020 7122 8324</a>
         </div>
     </div>
@@ -129,16 +128,16 @@
                         <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Subject to assessment:</strong> Substantial difficulty walking (pain, breathlessness, speed, distance), severe arm disability, child under 3 with medical needs, dangerous behaviour, non-visible conditions causing distress.</li>
                         <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Who can apply:</strong> Drivers or passengers, adults or children, UK residents.</li>
                         <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Cost:</strong> Up to £10 (varies by council), valid 3 years.</li>
-                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>How it works:</strong> Your local council assesses the application – we handle the full process for strong cases.</li>
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>How it works:</strong> Your local council assesses the application – we handle the full process, evidence gathering, and appeals if needed.</li>
                     </ul>
-                    <p>Success-based fee from £99 only if approved.</p>
+                    <p>We specialise in Blue Badge applications – high success rate. Success-based fee from £99 only if approved.</p>
                 </div>
                 <div class="col-lg-6">
                     <img class="img-fluid rounded" src="aa3.jpg" alt="Blue Badge parking permit card">
                 </div>
             </div>
             <div class="text-center mt-5">
-                <p class="fs-5 fw-bold">Complete the quiz below – honest answers give the best guidance.</p>
+                <p class="fs-5 fw-bold">Complete the quiz below – we will review your answers and call you.</p>
             </div>
         </div>
     </div>
@@ -147,14 +146,14 @@
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">25-Question Eligibility Quiz</h2>
-            <p class="text-center mb-5">Answer Yes or No to each question.</p>
+            <p class="text-center mb-5">Answer Yes or No to each question. The more "Yes" answers in relevant sections, the stronger the potential case.</p>
             <div class="progress mb-5">
                 <div class="progress-bar bg-primary" id="progressBar" style="width: 0%;"></div>
             </div>
             <form id="quizForm" action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="New Blue Badge Quiz Submission - Strong Case">
-                <input type="hidden" name="_autoresponse" value="Thank you for completing the Blue Badge quiz. Your answers indicate a strong case – we'll call you soon to discuss next steps.">
+                <input type="hidden" name="_subject" value="New Blue Badge Quiz Submission">
+                <input type="hidden" name="_autoresponse" value="Thank you for completing the Blue Badge eligibility quiz. We have received your answers and will call you soon to discuss next steps.">
                 <input type="hidden" name="Outcome" id="outcomeHidden" value="">
                 <!-- Question 1 -->
                 <div class="quiz-step active" id="step1">
@@ -615,10 +614,8 @@
                     <h3>Thank you for completing the quiz</h3>
                     <p>Unfortunately, based on your answers, it seems you may not currently meet the main Blue Badge eligibility criteria.</p>
                     <p>We only assist with strong cases to ensure the best outcomes.</p>
-                    <p>For official guidance:</p>
-                    <a href="https://www.gov.uk/apply-blue-badge" class="btn btn-primary mt-3" target="_blank">Apply Directly on GOV.UK</a><br><br>
-                    <a href="https://www.citizensadvice.org.uk/benefits/" class="btn btn-outline-primary mt-2" target="_blank">Citizens Advice Help</a><br><br>
-                    <a href="index.html" class="btn btn-outline-primary mt-2">Back to Home</a>
+                    <a href="tel:02071228324" class="btn btn-primary mt-3 px-5">Call Us: 020 7122 8324</a><br><br>
+                    <a href="index.html" class="btn btn-outline-primary">Back to Home</a>
                 </div>
                 <!-- Thank You Message -->
                 <div class="thank-you" id="thankYou">
@@ -685,7 +682,7 @@
                 points = 100;
             } else {
                 if (getValue('Q6') === 'Yes') points += 25;
-                if (getValue('Q7') === 'No') points += 30; // Core mobility question – high weight
+                if (getValue('Q7') === 'No') points += 30;
                 if (getValue('Q13') === 'Yes') points += 10;
                 if (getValue('Q14') === 'Yes') points += 10;
                 if (getValue('Q15') === 'Yes') points += 8;
