@@ -41,7 +41,7 @@
         .bg-dark { background-color: #808080 !important; }
         .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
         .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
-        .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
+        .spinnermobile-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
         .bg-light { background-color: #f8f8f8 !important; }
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
@@ -184,6 +184,7 @@
                 padding: 12px 15px;
                 background-color: #f8f8f8;
                 border-bottom: 1px solid #eee;
+                margin-top: 20px; /* Added extra space to separate from logo/squiggle */
             }
         }
 
@@ -239,7 +240,7 @@
             }
         }
         .manual-microcombo-badge .stars {
-            color: #00b67a; /* Green stars as requested */
+            color: #00b67a; /* Green stars */
             font-size: 1.1rem;
         }
         .manual-microcombo-badge .trustpilot-text {
@@ -277,7 +278,7 @@
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-border text-primary", style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -322,7 +323,7 @@
                 <span class="fa fa-bars"></span>
             </button>
 
-            <!-- Trustpilot badge – always visible on mobile (outside collapse) -->
+            <!-- Trustpilot badge – always visible on mobile (outside collapse, with extra space) -->
             <div class="trustpilot-badge-container d-lg-none">
                 <div class="manual-microcombo-badge">
                     <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
@@ -355,7 +356,7 @@
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
 
-                <!-- Trustpilot badge – desktop (inside collapse, right-aligned) -->
+                <!-- Trustpilot badge – desktop (right-aligned) -->
                 <div class="navbar-nav ms-auto align-items-center pe-3 d-none d-lg-flex">
                     <div class="trustpilot-badge-container">
                         <div class="manual-microcombo-badge">
@@ -451,7 +452,7 @@
                     <h2 class="text-secondary text-uppercase">About Claim For Me</h2>
                     <h2 class="mb-4">Expert Assistance to Claim Benefits You're Entitled To</h2>
                     <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check succed text-success me-3"></i>No initial payment required</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
@@ -768,7 +769,7 @@
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text text-center p-4 mb-4">
-                        <p class=" modification mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
+                        <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -847,7 +848,7 @@
                     <h4 class="mb-4">Contact Claim For Me</h4>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-sm-square bg-success text-white mr-0" href="https://wa.me/442071228324" target="_blank">
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
