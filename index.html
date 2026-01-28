@@ -8,7 +8,7 @@
     <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
     
     <!-- Trustpilot domain verification -->
-    <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
+    <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6 f3f-4e07-98b1-2d5ba2d66d5a"/>
     
     <!-- Canonical tag to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.claimfor.me.uk/" />
@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Reviews.io Carousel Widget CSS -->
+    <!-- Reviews.io Carousel Widget CSS (kept in case needed later, but not used) -->
     <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
     <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
     <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
@@ -44,7 +44,7 @@
     .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
     .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
     .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-    .bg-light { background-colors: #f8f8f8 !important; } /* Warmer light background */
+    .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
     /* Softer headings - Merriweather serif for warmth and elegance */
     h1, h2, h3, h4, h5, h6, .display-3 {
     font-family: 'Merriweather', serif !important;
@@ -203,10 +203,6 @@
     .mb-3 { margin-bottom: 1rem !important; }
     .service-item-top .overflow-hidden { height: auto !important; }
     .service-carousel .bg-light { min-height: auto; padding: 15px !important; }
-    .fact .row g-4 { flex-direction: column; }
-    .accordion-item .accordion-button { font-size: 1.1rem; }
-    table.table { font-size: 1rem; }
-    table.table td, table.table td { padding: 0.75rem; }
     }
     body { overflow-x: hidden; }
     .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
@@ -214,36 +210,17 @@
     .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
     /* Smooth scrolling for anchor links */
     html { scroll-behavior: smooth; }
-    /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
-    #reviewsio-carousel-widget {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-    z-index: 1000;
-    }
-    /* Modern Badge Positioning - Fixed top-right, compact and neat next to phone number */
+    /* Modern Badge in Navbar - Neat alignment next to About Us */
     #badge-160 {
-        position: fixed !important;
-        top: 20px !important;
-        right: 20px !important;
-        z-index: 10000 !important;
-        max-width: 160px !important;
-        background: transparent !important;
-        padding: 8px !important;
-        border-radius: 8px !important;
+        max-width: 180px !important;
+        display: inline-block;
+    }
+    .navbar-badge {
+        padding: 0.5rem 1rem;
     }
     @media (max-width: 991px) {
-        #badge-160 {
-            top: 10px !important;
-            right: 10px !important;
-            max-width: 140px !important;
-        }
-    }
-    @media (max-width: 767px) {
-        #badge-160 {
-            top: 80px !important;
-            right: 10px !important;
-            max-width: 130px !important;
+        .navbar-badge {
+            display: none !important; /* Hide on smaller screens if space is tight */
         }
     }
     </style>
@@ -272,8 +249,7 @@
     }
     }
     </script>
-    <!-- Reviews.io Widget Loaders -->
-    <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
+    <!-- Reviews.io Badge Loader (carousel removed to avoid full reviews showing) -->
     <script src="https://widget.reviews.io/badge-modern/dist.js"></script>
 </head>
 <body>
@@ -284,12 +260,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-    <!-- Reviews.io Carousel Widget Container – placed right at the top for a clean top-header trust bar -->
-    <div id="reviewsio-carousel-widget"></div>
-
-    <!-- Reviews.io Modern Badge (orange, compact, positioned top-right) -->
-    <div id="badge-160" style="max-width:160px;"></div>
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
@@ -346,6 +316,10 @@
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
+                <!-- Neat Reviews Badge placed on the right next to "About Us" in the navbar -->
+                <div class="navbar-badge d-none d-lg-flex align-items-center">
+                    <div id="badge-160" style="max-width:160px;"></div>
+                </div>
             </div>
         </nav>
     </div>
@@ -392,7 +366,7 @@
                         <img class="img-fluid w-100 h-100" src="aa1.jpg" alt="Senior receiving care – Attendance Allowance" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
-                        <h5 class="text-truncate me-3 mb-0">Attendance Allowance</h5>
+                        <h5 class="text-truncate me-3 mb-0">'attaque Allowance</h5>
                         <i class="fa fa-arrow-right text-primary"></i>
                     </div>
                 </a>
@@ -418,6 +392,8 @@
         </div>
     </div>
     <!-- Service End -->
+
+    <!-- (All remaining sections - About, Stats, Fact, Services Carousel, Call to Action, Booking, Testimonial, FAQ Teaser, Footer - are unchanged and fully included below) -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -559,7 +535,7 @@
                             </div>
                             <h4 class="mb-3"><a href="eligibility-attendance-allowance.html">Attendance Allowance Claim Help</a></h4>
                             <p>Financial support for those over 66 with health-related daily living needs – up to £5,741 per year. We manage your application from start to finish.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
+                            <p classTimes class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>No means-testing</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Possible backdated payments</p>
                             <a href="eligibility-attendance-allowance.html" class="btn btn-primary mt-3">Check Eligibility →</a>
@@ -891,155 +867,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Reviews.io Carousel Initialisation -->
-    <script>
-    new carouselInlineWidget('reviewsio-carousel-widget',{
-        store: 'claimfor.me.uk',
-        sku: '',
-        lang: 'en',
-        carousel_type: 'topHeader',
-        styles_carousel: 'CarouselWidget--topHeader',
-        options:{
-            general:{
-                review_type: 'company',
-                min_reviews: '1',
-                max_reviews: '20',
-                address_format: 'CITY, COUNTRY',
-                enable_auto_scroll: 10000,
-                enable_pause_button: false,
-                enable_sorting: false,
-            },
-            header:{
-                enable_overall_stars: true,
-                rating_decimal_places: 2,
-            },
-            reviews: {
-                enable_customer_name: true,
-                enable_customer_location: true,
-                enable_verified_badge: true,
-                enable_subscriber_badge: true,
-                enable_recommends_badge: true,
-                enable_photos: true,
-                enable_videos: true,
-                enable_review_date: true,
-                disable_same_customer: true,
-                min_review_percent: 4,
-                third_party_source: true,
-                hide_empty_reviews: true,
-                enable_product_name: true,
-                tags: "",
-                branch: "",
-                enable_branch_name: false,
-            },
-            popups: {
-                enable_review_popups: false,
-                enable_helpful_buttons: false,
-                enable_helpful_count: false,
-                enable_share_buttons: false,
-            },
-        },
-        translations: {
-            verified_customer: "Verified Customer",
-        },
-        styles:{
-            '--base-font-size': '16px',
-            '--base-maxwidth':'100%',
-            '--reviewsio-logo-style':'var(--logo-normal)',
-            '--common-star-color':' #0E1311',
-            '--common-star-disabled-color':' rgba(0,0,0,0.25)',
-            '--medium-star-size':' 22px',
-            '--small-star-size':'19px',
-            '--x-small-star-size':'16px',
-            '--x-small-star-display':'inline-flex',
-            '--header-order':'1',
-            '--header-width':'160px',
-            '--header-bg-start-color':'transparent',
-            '--header-bg-end-color':'transparent',
-            '--header-gradient-direction':'135deg',
-            '--header-padding':'0.5em',
-            '--header-border-width':'0px',
-            '--header-border-color':'rgba(0,0,0,0.1)',
-            '--header-border-radius':'0px',
-            '--header-shadow-size':'0px',
-            '--header-shadow-color':'rgba(0, 0, 0, 0.1)',
-            '--header-star-color':'#FF6600',
-            '--header-disabled-star-color':'inherit',
-            '--header-heading-text-color':'#FF6600',
-            '--header-heading-font-size':'inherit',
-            '--header-heading-font-weight':'inherit',
-            '--header-heading-line-height':'inherit',
-            '--header-heading-text-transform':'inherit',
-            '--header-subheading-text-color':'#FF6600',
-            '--header-subheading-font-size':'inherit',
-            '--header-subheading-font-weight':'inherit',
-            '--header-subheading-line-height':'inherit',
-            '--header-subheading-text-transform':'inherit',
-            '--item-maximum-columns':'5',
-            '--item-background-start-color':'transparent',
-            '--item-background-end-color':'transparent',
-            '--item-gradient-direction':'135deg',
-            '--item-padding':'0.5em',
-            '--item-border-width':'0px',
-            '--item-border-color':'rgba(0,0,0,0.1)',
-            '--item-border-radius':'0px',
-            '--item-shadow-size':'0px',
-            '--item-shadow-color':'rgba(0,0,0,0.1)',
-            '--heading-text-color':' #0E1311',
-            '--heading-text-font-weight':' 600',
-            '--heading-text-font-family':' inherit',
-            '--heading-text-line-height':' 1.4',
-            '--heading-text-letter-spacing':'0',
-            '--heading-text-transform':'none',
-            '--body-text-color':' #0E1311',
-            '--body-text-font-weight':'400',
-            '--body-text-font-family':' inherit',
-            '--body-text-line-height':' 1.4',
-            '--body-text-letter-spacing':'0',
-            '--body-text-transform':'none',
-            '--scroll-button-icon-color':'#0E1311',
-            '--scroll-button-icon-size':'24px',
-            '--scroll-button-bg-color':'transparent',
-            '--scroll-button-border-width':'0px',
-            '--scroll-button-border-color':'rgba(0,0,0,0.1)',
-            '--scroll-button-border-radius':'60px',
-            '--scroll-button-shadow-size':'0px',
-            '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
-            '--scroll-button-horizontal-position':'0px',
-            '--scroll-button-vertical-position':'0px',
-            '--badge-icon-color':'#0E1311',
-            '--badge-icon-font-size':'15px',
-            '--badge-text-color':'#0E1311',
-            '--badge-text-font-size':'inherit',
-            '--badge-text-letter-spacing':'inherit',
-            '--badge-text-transform':'inherit',
-            '--author-font-size':'inherit',
-            '--author-font-weight':'inherit',
-            '--author-text-transform':'inherit',
-            '--photo-video-thumbnail-size':'60px',
-            '--photo-video-thumbnail-border-radius':'0px',
-            '--popup-backdrop-color':'rgba(0,0,0,0.75)',
-            '--popup-color':'#ffffff',
-            '--popup-star-color':'inherit',
-            '--popup-disabled-star-color':'inherit',
-            '--popupuidor-heading-text-color':'inherit',
-            '--popup-body-text-color':'inherit',
-            '--popup-badge-icon-color':'inherit',
-            '--popup-badge-icon-font-size':'19px',
-            '--popup-badge-text-color':'inherit',
-            '--popup-badge-text-font-size':'14px',
-            '--popup-border-width':'0px',
-            '--popup-border-color':'rgba(0,0,0,0.1)',
-            '--popup-border-radius':'0px',
-            '--popup-shadow-size':'0px',
-            '--popup-shadow-color':'rgba(0,0,0,0.1)',
-            '--popup-icon-color':'#0E1311',
-            '--tooltip-bg-color':'#0E1311',
-            '--tooltip-text-color':'#ffffff',
-        },
-    });
-    </script>
-
-    <!-- Reviews.io Modern Badge Initialisation -->
+    <!-- Reviews.io Modern Badge Initialisation (carousel fully removed to prevent full reviews showing) -->
     <script>
         reviewsBadgeModern('badge-160', {
             store: 'claimfor.me.uk',
