@@ -68,7 +68,7 @@
     font-size: 1.1rem !important;
     line-height: 1.6 !important;
     }
-    .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
+    .navbar-left .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
     .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #FF6600 !important; }
     .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .dropdown-item:hover { background-color: #fff8f2 !important; color: #FF6600 !important; }
@@ -129,13 +129,14 @@
         border-bottom: 1px solid #eee;
     }
     /* Intro Video Modal - Full screen, highest z-index to cover navbar completely, video stops on close */
-    #introVideoModal { z-index: 2000 !important; }
-    #introVideoModal .modal-backdrop { z-index: 1999 !important; }
-    #introVideoModal .modal-content { background: rgba(0,0,0,0.95); border: none; height: 100vh; width: 100vw; }
-    #introVideoModal .modal-dialog { max-width: 100%; height: 100%; margin: 0; padding: 0; }
+    #introVideoModal { z-index: 9999 !important; }
+    #introVideoModal .modal-backdrop { z-index: 9998 !important; background: rgba(0,0,0,0.95); }
+    #introVideoModal .modal-content { background: transparent; border: none; height: 100vh; width: 100vw; }
+    #introVideoModal .modal-dialog { max-width: 100vw; height: 100vh; margin: 0; padding: 0; }
     #introVideoModal .modal-body { padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    #introVideoModal video { width: 90%; max-width: 1200px; height: auto; max-height: 80vh; object-fit: contain; }
+    #introVideoModal video { width: 90%; max-width: 1200px; height: auto; max-height: 85vh; object-fit: contain; }
     #introVideoModal .btn-close { position: absolute; top: 20px; right: 20px; z-index: 10; filter: invert(1); }
+    #introVideoModal .enter-site-btn { position: absolute; bottom: 40px; z-index: 10; }
     @media (max-width: 767px) {
         #introVideoModal video { width: 100%; max-height: 70vh; }
     }
@@ -158,7 +159,7 @@
 
     <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, fully covers navbar) -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
@@ -167,7 +168,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="text-center p-4 bg-dark">
+                <div class="text-center p-4 enter-site-btn">
                     <button type="button" class="btn btn-primary btn-lg px-5" data-bs-dismiss="modal">Enter Site</button>
                 </div>
             </div>
@@ -845,7 +846,7 @@
             '--header-width':'160px',
             '--header-bg-start-color':'transparent',
             '--header-bg-end-color':'transparent',
-            '--header-gradient-diagonal':'135deg',
+            '--header-gradient-direction':'135deg',
             '--header-padding':'0.5em',
             '--header-border-width':'0px',
             '--header-border-color':'rgba(0,0,0,0.1)',
