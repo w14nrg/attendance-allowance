@@ -34,224 +34,231 @@
     <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
     <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
     <style>
-        /* Primary colours kept for CTAs */
-        .text-primary { color: #FF6600 !important; }
-        .bg-primary { background-color: #FF6600 !important; }
-        .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
-        .text-secondary { color: #808080 !important; }
-        .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
-        .bg-dark { background-color: #808080 !important; }
-        .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
-        .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
-        .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
-        /* Softer headings - Merriweather serif for warmth and elegance */
-        h1, h2, h3, h4, h5, h6, .display-3 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            color: #333333 !important;
-            line-height: 1.3 !important;
-        }
-        /* Hero title slightly less bold */
-        .display-3 {
-            font-weight: 600 !important;
-            font-size: 3rem !important;
-        }
-        /* Logo - elegant and calm */
-        .navbar-brand h1 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            font-size: 2.6rem !important;
-            color: #333333 !important;
-            margin: 0;
-        }
-        /* Fancy logo - orange C with wavy orange squiggle/tail under the rest */
-        .navbar-brand .logo-c {
-            color: #FF6600 !important;
-        }
-        .navbar-brand .logo-rest {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
-            text-decoration-color: #FF6600;
-            text-decoration-thickness: 4px;
-            text-underline-offset: 6px;
-        }
-        /* Body text - highly readable for seniors */
-        body, p, li, .accordion-body, .table {
-            font-family: 'Open Sans', sans-serif !important;
-            color: #444444 !important;
-            font-size: 1.1rem !important;
-            line-height: 1.6 !important;
-        }
-        /* Nav links - softer */
-        .navbar-light .navbar-nav .nav-link {
-            color: #444444 !important;
-            font-weight: 500 !important;
-            font-family: 'Open Sans', sans-serif !important;
-        }
-        .navbar-light .navbar-nav .nav-link:hover,
-        .navbar-light .navbar-nav .nav-link.active {
-            color: #FF6600 !important;
-        }
-        /* Dropdown styling */
-        .dropdown-menu {
-            border: none !important;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .dropdown-item:hover {
-            background-color: #fff8f2 !important;
-            color: #FF6600 !important;
-        }
-        /* Cleaner nav bar */
-        .nav-bar { background-color: #ffffff !important; }
-        /* Other section tweaks */
-        .video {
-            background-color: #FF6600 !important;
-            background-image: none !important;
-            padding: 100px 0 !important;
-            color: white !important;
-        }
-        .video h1, .video h3 {
-            color: white !important;
-        }
-        .fact {
-            background-image: none !important;
-            background-color: #FF6600 !important;
-        }
-        .testimonial-text {
-            background-color: #fff8f2 !important;
-            border: 1px solid #ffe0cc !important;
-            border-left: 5px solid #FF6600 !important;
-            color: #333 !important;
-        }
-        .testimonial-text p {
-            color: #333 !important;
-        }
-        /* Added for clickable cards */
-        .service-item-top {
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            display: block;
-        }
-        .service-item-top:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .fact h2 a { color: white !important; text-decoration: none; }
-        .fact h2 a:hover { text-decoration: underline; }
-        /* Orange flashing badge for "from £99" */
-        @keyframes badgePulse {
-            0% {
-                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
-                transform: scale(1);
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(255, 102, 0, 0.9);
-                transform: scale(1.08);
-            }
-            100% {
-                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
-                transform: scale(1);
-            }
-        }
-        .price-badge {
-            display: inline-block;
-            background-color: #FF6600;
-            color: white;
-            font-weight: bold;
-            font-size: 2rem;
-            padding: 12px 30px;
-            border-radius: 50px;
-            margin: 20px 0;
-            animation: badgePulse 3s ease-in-out infinite;
-        }
-        /* Footer adjustments for light background */
-        .footer h4, .footer h5, .footer h6 {
-            color: #FF6600 !important;
-        }
-        .footer .text-light {
-            color: #333333 !important;
-        }
-        .footer .btn-link {
-            color: #FF6600 !important;
-            text-decoration: underline;
-            padding: 0;
-        }
-        .footer .btn-link:hover {
-            color: #CC5200 !important;
-        }
-        .footer .copyright {
-            color: #666666 !important;
-        }
-        /* Darker footer links for better visibility */
-        .footer-links a {
-            color: #333333 !important;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .footer-links a:hover {
-            color: #FF6600 !important;
-            text-decoration: underline;
-        }
-        @media (max-width: 767px) {
-            .display-3 { font-size: 2.5rem !important; }
-            .price-badge { font-size: 1.6rem; padding: 10px 24px; }
-            .container-xxl { padding: 0 !important; }
-            .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-            .mb-5 { margin-bottom: 3rem !important; }
-            .mb-4 { margin-bottom: 1.5rem !important; }
-            .mb-3 { margin-bottom: 1rem !important; }
-            .service-item-top .overflow-hidden { height: auto !important; }
-            .service-carousel .bg-light { min-height: auto; padding: 15px !important; }
-            .fact .row g-4 { flex-direction: column; }
-            .accordion-item .accordion-button { font-size: 1.1rem; }
-            table.table { font-size: 1rem; }
-            table.table td, table.table td { padding: 0.75rem; }
-        }
-        body { overflow-x: hidden; }
-        .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
-        .row { margin-left: -15px; margin-right: -15px; }
-        .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
-        /* Smooth scrolling for anchor links */
-        html { scroll-behavior: smooth; }
-        /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
-        #reviewsio-carousel-widget {
-            background-color: #ffffff;
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-            z-index: 1000;
-        }
+    /* Primary colours kept for CTAs */
+    .text-primary { color: #FF6600 !important; }
+    .bg-primary { background-color: #FF6600 !important; }
+    .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
+    .text-secondary { color: #808080 !important; }
+    .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
+    .bg-dark { background-color: #808080 !important; }
+    .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
+    .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
+    .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
+    .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
+    /* Softer headings - Merriweather serif for warmth and elegance */
+    h1, h2, h3, h4, h5, h6, .display-3 {
+    font-family: 'Merriweather', serif !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    line-height: 1.3 !important;
+    }
+    /* Hero title slightly less bold */
+    .display-3 {
+    font-weight: 600 !important;
+    font-size: 3rem !important;
+    }
+    /* Logo - elegant and calm */
+    .navbar-brand h1 {
+    font-family: 'Merriweather', serif !important;
+    font-weight: 700 !important;
+    font-size: 2.6rem !important;
+    color: #333333 !important;
+    margin: 0;
+    }
+    /* Fancy logo - orange C with wavy orange squiggle/tail under the rest */
+    .navbar-brand .logo-c {
+    color: #FF6600 !important;
+    }
+    .navbar-brand .logo-rest {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #FF6600;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    }
+    /* Body text - highly readable for seniors */
+    body, p, li, .accordion-body, .table {
+    font-family: 'Open Sans', sans-serif !important;
+    color: #444444 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    }
+    /* Nav links - softer */
+    .navbar-light .navbar-nav .nav-link {
+    color: #444444 !important;
+    font-weight: 500 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+    color: #FF6600 !important;
+    }
+    /* Dropdown styling */
+    .dropdown-menu {
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .dropdown-item:hover {
+    background-color: #fff8f2 !important;
+    color: #FF6600 !important;
+    }
+    /* Cleaner nav bar */
+    .nav-bar { background-color: #ffffff !important; }
+    /* Other section tweaks */
+    .video {
+    background-color: #FF6600 !important;
+    background-image: none !important;
+    padding: 100px 0 !important;
+    color: white !important;
+    }
+    .video h1, .video h3 {
+    color: white !important;
+    }
+    .fact {
+    background-image: none !important;
+    background-color: #FF6600 !important;
+    }
+    .testimonial-text {
+    background-color: #fff8f2 !important;
+    border: 1px solid #ffe0cc !important;
+    border-left: 5px solid #FF6600 !important;
+    color: #333 !important;
+    }
+    .testimonial-text p {
+    color: #333 !important;
+    }
+    /* Added for clickable cards */
+    .service-item-top {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: block;
+    }
+    .service-item-top:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .fact h2 a { color: white !important; text-decoration: none; }
+    .fact h2 a:hover { text-decoration: underline; }
+    /* Orange flashing badge for "from £99" */
+    @keyframes badgePulse {
+    0% {
+    box-shadow: 0 0 0 rgba(255, 102, 0, 0);
+    transform: scale(1);
+    }
+    50% {
+    box-shadow: 0 0 30px rgba(255, 102, 0, 0.9);
+    transform: scale(1.08);
+    }
+    100% {
+    box-shadow: 0 0 0 rgba(255, 102, 0, 0);
+    transform: scale(1);
+    }
+    }
+    .price-badge {
+    display: inline-block;
+    background-color: #FF6600;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin: 20px 0;
+    animation: badgePulse 3s ease-in-out infinite;
+    }
+    /* Footer adjustments for light background */
+    .footer h4, .footer h5, .footer h6 {
+    color: #FF6600 !important;
+    }
+    .footer .text-light {
+    color: #333333 !important;
+    }
+    .footer .btn-link {
+    color: #FF6600 !important;
+    text-decoration: underline;
+    padding: 0;
+    }
+    .footer .btn-link:hover {
+    color: #CC5200 !important;
+    }
+    .footer .copyright {
+    color: #666666 !important;
+    }
+    /* Darker footer links for better visibility */
+    .footer-links a {
+    color: #333333 !important;
+    text-decoration: none;
+    font-weight: 500;
+    }
+    .footer-links a:hover {
+    color: #FF6600 !important;
+    text-decoration: underline;
+    }
+    @media (max-width: 767px) {
+    .display-3 { font-size: 2.5rem !important; }
+    .price-badge { font-size: 1.6rem; padding: 10px 24px; }
+    .container-xxl { padding: 0 !important; }
+    .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    .mb-5 { margin-bottom: 3rem !important; }
+    .mb-4 { margin-bottom: 1.5rem !important; }
+    .mb-3 { margin-bottom: 1rem !important; }
+    .service-item-top .overflow-hidden { height: auto !important; }
+    .service-carousel .bg-light { min-height: auto; padding: 15px !important; }
+    .fact .row g-4 { flex-direction: column; }
+    .accordion-item .accordion-button { font-size: 1.1rem; }
+    table.table { font-size: 1rem; }
+    table.table td, table.table td { padding: 0.75rem; }
+    }
+    body { overflow-x: hidden; }
+    .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
+    .row { margin-left: -15px; margin-right: -15px; }
+    .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
+    /* Smooth scrolling for anchor links */
+    html { scroll-behavior: smooth; }
+    /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
+    #reviewsio-carousel-widget {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    z-index: 1000;
+    }
+    /* Ribbon Badge Positioning - Fixed top-right near phone number */
+    #badge-ribbon {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 10000 !important;
+    }
     </style>
     <!-- Local Business Schema - Fully valid with address, url, and required fields -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Claim For Me",
-      "url": "https://www.claimfor.me.uk/",
-      "telephone": "020 7122 8324",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Office 123, Example House",
-        "addressLocality": "London",
-        "addressRegion": "London",
-        "postalCode": "EC1A 1BB",
-        "addressCountry": "GB"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Claim For Me",
+    "url": "https://www.claimfor.me.uk/",
+    "telephone": "020 7122 8324",
+    "priceRange": "$$",
+    "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Office 123, Example House",
+    "addressLocality": "London",
+    "addressRegion": "London",
+    "postalCode": "EC1A 1BB",
+    "addressCountry": "GB"
+    },
+    "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+    }
     }
     </script>
-    <!-- Reviews.io Widget Loader -->
+    <!-- Reviews.io Widget Loaders -->
     <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
+    <script src="https://widget.reviews.io/badge-ribbon/dist.js"></script>
 </head>
 <body>
-    <!-- The entire body remains unchanged -->
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -259,8 +266,13 @@
         </div>
     </div>
     <!-- Spinner End -->
+
     <!-- Reviews.io Carousel Widget Container – placed right at the top for a clean top-header trust bar -->
     <div id="reviewsio-carousel-widget"></div>
+
+    <!-- Reviews.io Ribbon Badge Container (positioned top-right via CSS) -->
+    <div id="badge-ribbon"></div>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
@@ -287,6 +299,7 @@
         </div>
     </div>
     <!-- Topbar End -->
+
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
@@ -319,6 +332,7 @@
         </nav>
     </div>
     <!-- Navbar End -->
+
     <!-- Hero Section Start - Static text + flashing orange badge -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
@@ -330,6 +344,7 @@
         </div>
     </div>
     <!-- Hero Section End -->
+
     <!-- Frustrations Section (moved up for better flow) -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -349,6 +364,7 @@
         </div>
     </div>
     <!-- Frustrations Section End -->
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -384,6 +400,7 @@
         </div>
     </div>
     <!-- Service End -->
+
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -415,6 +432,7 @@
         </div>
     </div>
     <!-- About End -->
+
     <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -472,6 +490,7 @@
         </div>
     </div>
     <!-- Stats End -->
+
     <!-- Fact Start -->
     <div class="container-fluid fact my-5 py-5">
         <div class="container">
@@ -500,15 +519,16 @@
         </div>
     </div>
     <!-- Fact End -->
+
     <!-- Services Carousel Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
-            <div class="col-lg-3 d-none d-lg-flex">
+            <div class="col-lg-4 d-none d-lg-flex">
                 <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
                     <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Claim For Me</h1>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-9">
+            <div class="col-md-12 col-lg-8">
                 <div class="ms-lg-5 ps-lg-5">
                     <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
                         <h2 class="text-secondary text-uppercase">Our Services</h2>
@@ -554,6 +574,7 @@
         </div>
     </div>
     <!-- Services Carousel End -->
+
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
@@ -563,6 +584,7 @@
         </div>
     </div>
     <!-- Call to Action End -->
+
     <!-- Booking Start (Request Call Back) -->
     <div class="container-fluid my-5 px-0" id="request-callback">
         <div class="video wow fadeInUp" data-wow-delay="0.1s">
@@ -675,7 +697,7 @@
                                                         <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_yes" value="Yes" required>
                                                         <label class="form-check-label" for="mobility_yes">Yes</label>
                                                     </div>
-                                                    <div class="form-check">
+                                                    <div class="form-call-check">
                                                         <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_no" value="No" required>
                                                         <label class="form-check-label" for="mobility_no">No</label>
                                                     </div>
@@ -689,10 +711,11 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div flavours
         </div>
     </div>
     <!-- Booking End -->
+
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -761,6 +784,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
     <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -772,6 +796,7 @@
         </div>
     </div>
     <!-- FAQ Teaser End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -819,8 +844,7 @@
             </div>
             <div class="container mt-5">
                 <div class="copyright text-center">
-                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
-                    <br><br>
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.<br><br><br>
                     <div class="footer-links">
                         <a href="faq.html">FAQ</a> |
                         <a href="privacy-policy.html">Privacy Policy</a> |
@@ -831,8 +855,10 @@
         </div>
     </div>
     <!-- Footer End -->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -846,152 +872,161 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
     <!-- Reviews.io Carousel Initialisation -->
     <script>
     new carouselInlineWidget('reviewsio-carousel-widget',{
-      store: 'claimfor.me.uk',
-      sku: '',
-      lang: 'en',
-      carousel_type: 'topHeader',
-      styles_carousel: 'CarouselWidget--topHeader',
-      options:{
-        general:{
-          review_type: 'company',
-          min_reviews: '1',
-          max_reviews: '20',
-          address_format: 'CITY, COUNTRY',
-          enable_auto_scroll: 10000,
-          enable_pause_button: false,
-          enable_sorting: false,
+        store: 'claimfor.me.uk',
+        sku: '',
+        lang: 'en',
+        carousel_type: 'topHeader',
+        styles_carousel: 'CarouselWidget--topHeader',
+        options:{
+            general:{
+                review_type: 'company',
+                min_reviews: '1',
+                max_reviews: '20',
+                address_format: 'CITY, COUNTRY',
+                enable_auto_scroll: 10000,
+                enable_pause_button: false,
+                enable_sorting: false,
+            },
+            header:{
+                enable_overall_stars: true,
+                rating_decimal_places: 2,
+            },
+            reviews: {
+                enable_customer_name: true,
+                enable_customer_location: true,
+                enable_verified_badge: true,
+                enable_subscriber_badge: true,
+                enable_recommends_badge: true,
+                enable_photos: true,
+                enable_videos: true,
+                enable_review_date: true,
+                disable_same_customer: true,
+                min_review_percent: 4,
+                third_party_source: true,
+                hide_empty_reviews: true,
+                enable_product_name: true,
+                tags: "",
+                branch: "",
+                enable_branch_name: false,
+            },
+            popups: {
+                enable_review_popups: false,
+                enable_helpful_buttons: false,
+                enable_helpful_count: false,
+                enable_share_buttons: false,
+            },
         },
-        header:{
-          enable_overall_stars: true,
-          rating_decimal_places: 2,
+        translations: {
+            verified_customer: "Verified Customer",
         },
-        reviews: {
-          enable_customer_name: true,
-          enable_customer_location: true,
-          enable_verified_badge: true,
-          enable_subscriber_badge: true,
-          enable_recommends_badge: true,
-          enable_photos: true,
-          enable_videos: true,
-          enable_review_date: true,
-          disable_same_customer: true,
-          min_review_percent: 4,
-          third_party_source: true,
-          hide_empty_reviews: true,
-          enable_product_name: true,
-          tags: "",
-          branch: "",
-          enable_branch_name: false,
+        styles:{
+            '--base-font-size': '16px',
+            '--base-maxwidth':'100%',
+            '--reviewsio-logo-style':'var(--logo-normal)',
+            '--common-star-color':' #0E1311',
+            '--common-star-disabled-color':' rgba(0,0,0,0.25)',
+            '--medium-star-size':' 22px',
+            '--small-star-size':'19px',
+            '--x-small-star-size':'16px',
+            '--x-small-star-display':'inline-flex',
+            '--header-order':'1',
+            '--header-width':'160px',
+            '--header-bg-start-color':'transparent',
+            '--header-bg-end-color':'transparent',
+            '--header-gradient-direction':'135deg',
+            '--header-padding':'0.5em',
+            '--header-border-width':'0px',
+            '--header-border-color':'rgba(0,0,0,0.1)',
+            '--header-border-radius':'0px',
+            '--header-shadow-size':'0px',
+            '--header-shadow-color':'rgba(0, 0, 0, 0.1)',
+            '--header-star-color':'#FF6600',
+            '--header-disabled-star-color':'inherit',
+            '--header-heading-text-color':'#FF6600',
+            '--header-heading-font-size':'inherit',
+            '--header-heading-font-weight':'inherit',
+            '--header-heading-line-height':'inherit',
+            '--header-heading-text-transform':'inherit',
+            '--header-subheading-text-color':'#FF6600',
+            '--header-subheading-font-size':'inherit',
+            '--header-subheading-font-weight':'inherit',
+            '--header-subheading-line-height':'inherit',
+            '--header-subheading-text-transform':'inherit',
+            '--item-maximum-columns':'5',
+            '--item-background-start-color':'transparent',
+            '--item-background-end-color':'transparent',
+            '--item-gradient-direction':'135deg',
+            '--item-padding':'0.5em',
+            '--item-border-width':'0px',
+            '--item-border-color':'rgba(0,0,0,0.1)',
+            '--item-border-radius':'0px',
+            '--item-shadow-size':'0px',
+            '--item-shadow-color':'rgba(0,0,0,0.1)',
+            '--heading-text-color':' #0E1311',
+            '--heading-text-font-weight':' 600',
+            '--heading-text-font-family':' inherit',
+            '--heading-text-line-height':' 1.4',
+            '--heading-text-letter-spacing':'0',
+            '--heading-text-transform':'none',
+            '--body-text-color':' #0E1311',
+            '--body-text-font-weight':'400',
+            '--body-text-font-family':' inherit',
+            '--body-text-line-height':' 1.4',
+            '--body-text-letter-spacing':'0',
+            '--body-text-transform':'none',
+            '--scroll-button-icon-color':'#0E1311',
+            '--scroll-button-icon-size':'24px',
+            '--scroll-button-bg-color':'transparent',
+            '--scroll-button-border-width':'0px',
+            '--scroll-button-border-color':'rgba(0,0,0,0.1)',
+            '--scroll-button-border-radius':'60px',
+            '--scroll-button-shadow-size':'0px',
+            '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
+            '--scroll-button-horizontal-position':'0px',
+            '--scroll-button-vertical-position':'0px',
+            '--badge-icon-color':'#0E1311',
+            '--badge-icon-font-size':'15px',
+            '--badge-text-color':'#0E1311',
+            '--badge-text-font-size':'inherit',
+            '--badge-text-letter-spacing':'inherit',
+            '--badge-text-transform':'inherit',
+            '--author-font-size':'inherit',
+            '--author-font-weight':'inherit',
+            '--author-text-transform':'inherit',
+            '--photo-video-thumbnail-size':'60px',
+            '--photo-video-thumbnail-border-radius':'0px',
+            '--popup-backdrop-color':'rgba(0,0,0,0.75)',
+            '--popup-color':'#ffffff',
+            '--popup-star-color':'inherit',
+            '--popup-disabled-star-color':'inherit',
+            '--popup-heading-text-color':'inherit',
+            '--popup-body-text-color':'inherit',
+            '--popup-badge-icon-color':'inherit',
+            '--popup-badge-icon-font-size':'19px',
+            '--popup-badge-text-color':'inherit',
+            '--popup-badge-text-font-size':'14px',
+            '--popup-border-width':'0px',
+            '--popup-border-color':'rgba(0,0,0,0.1)',
+            '--popup-border-radius':'0px',
+            '--popup-shadow-size':'0px',
+            '--popup-shadow-color':'rgba(0,0,0,0.1)',
+            '--popup-icon-color':'#0E1311',
+            '--tooltip-bg-color':'#0E1311',
+            '--tooltip-text-color':'#ffffff',
         },
-        popups: {
-          enable_review_popups: false,
-          enable_helpful_buttons: false,
-          enable_helpful_count: false,
-          enable_share_buttons: false,
-        },
-      },
-      translations: {
-        verified_customer: "Verified Customer",
-      },
-      styles:{
-        '--base-font-size': '16px',
-        '--base-maxwidth':'100%',
-        '--reviewsio-logo-style':'var(--logo-normal)',
-        '--common-star-color':' #0E1311',
-        '--common-star-disabled-color':' rgba(0,0,0,0.25)',
-        '--medium-star-size':' 22px',
-        '--small-star-size':'19px',
-        '--x-small-star-size':'16px',
-        '--x-small-star-display':'inline-flex',
-        '--header-order':'1',
-        '--header-width':'160px',
-        '--header-bg-start-color':'transparent',
-        '--header-bg-end-color':'transparent',
-        '--header-gradient-direction':'135deg',
-        '--header-padding':'0.5em',
-        '--header-border-width':'0px',
-        '--header-border-color':'rgba(0,0,0,0.1)',
-        '--header-border-radius':'0px',
-        '--header-shadow-size':'0px',
-        '--header-shadow-color':'rgba(0, 0, 0, 0.1)',
-        '--header-star-color':'#FF6600',
-        '--header-disabled-star-color':'inherit',
-        '--header-heading-text-color':'#FF6600',
-        '--header-heading-font-size':'inherit',
-        '--header-heading-font-weight':'inherit',
-        '--header-heading-line-height':'inherit',
-        '--header-heading-text-transform':'inherit',
-        '--header-subheading-text-color':'#FF6600',
-        '--header-subheading-font-size':'inherit',
-        '--header-subheading-font-weight':'inherit',
-        '--header-subheading-line-height':'inherit',
-        '--header-subheading-text-transform':'inherit',
-        '--item-maximum-columns':'5',
-        '--item-background-start-color':'transparent',
-        '--item-background-end-color':'transparent',
-        '--item-gradient-direction':'135deg',
-        '--item-padding':'0.5em',
-        '--item-border-width':'0px',
-        '--item-border-color':'rgba(0,0,0,0.1)',
-        '--item-border-radius':'0px',
-        '--item-shadow-size':'0px',
-        '--item-shadow-color':'rgba(0,0,0,0.1)',
-        '--heading-text-color':' #0E1311',
-        '--heading-text-font-weight':' 600',
-        '--heading-text-font-family':' inherit',
-        '--heading-text-line-height':' 1.4',
-        '--heading-text-letter-spacing':'0',
-        '--heading-text-transform':'none',
-        '--body-text-color':' #0E1311',
-        '--body-text-font-weight':'400',
-        '--body-text-font-family':' inherit',
-        '--body-text-line-height':' 1.4',
-        '--body-text-letter-spacing':'0',
-        '--body-text-transform':'none',
-        '--scroll-button-icon-color':'#0E1311',
-        '--scroll-button-icon-size':'24px',
-        '--scroll-button-bg-color':'transparent',
-        '--scroll-button-border-width':'0px',
-        '--scroll-button-border-color':'rgba(0,0,0,0.1)',
-        '--scroll-button-border-radius':'60px',
-        '--scroll-button-shadow-size':'0px',
-        '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
-        '--scroll-button-horizontal-position':'0px',
-        '--scroll-button-vertical-position':'0px',
-        '--badge-icon-color':'#0E1311',
-        '--badge-icon-font-size':'15px',
-        '--badge-text-color':'#0E1311',
-        '--badge-text-font-size':'inherit',
-        '--badge-text-letter-spacing':'inherit',
-        '--badge-text-transform':'inherit',
-        '--author-font-size':'inherit',
-        '--author-font-weight':'inherit',
-        '--author-text-transform':'inherit',
-        '--photo-video-thumbnail-size':'60px',
-        '--photo-video-thumbnail-border-radius':'0px',
-        '--popup-backdrop-color':'rgba(0,0,0,0.75)',
-        '--popup-color':'#ffffff',
-        '--popup-star-color':'inherit',
-        '--popup-disabled-star-color':'inherit',
-        '--popup-heading-text-color':'inherit',
-        '--popup-body-text-color':'inherit',
-        '--popup-badge-icon-color':'inherit',
-        '--popup-badge-icon-font-size':'19px',
-        '--popup-badge-text-color':'inherit',
-        '--popup-badge-text-font-size':'14px',
-        '--popup-border-width':'0px',
-        '--popup-border-color':'rgba(0,0,0,0.1)',
-        '--popup-border-radius':'0px',
-        '--popup-shadow-size':'0px',
-        '--popup-shadow-color':'rgba(0,0,0,0.1)',
-        '--popup-icon-color':'#0E1311',
-        '--tooltip-bg-color':'#0E1311',
-        '--tooltip-text-color':'#ffffff',
-      },
     });
+    </script>
+
+    <!-- Reviews.io Ribbon Badge Initialisation -->
+    <script>
+        reviewsBadgeRibbon("badge-ribbon", {
+            store: "claimfor.me.uk",
+            size: "small"
+        });
     </script>
 </body>
 </html>
