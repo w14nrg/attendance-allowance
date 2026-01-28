@@ -8,7 +8,7 @@
     <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
     
     <!-- Trustpilot domain verification -->
-    <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6 f3f-4e07-98b1-2d5ba2d66d5a"/>
+    <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
     
     <!-- Canonical tag to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.claimfor.me.uk/" />
@@ -17,7 +17,7 @@
     <!-- Google Web Fonts - Added Merriweather for warmer headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2 FAMILY=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Reviews.io Carousel Widget CSS (kept in case needed later, but not used) -->
+    <!-- Reviews.io Carousel Widget CSS -->
     <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
     <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
     <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
@@ -156,7 +156,7 @@
     }
     .price-badge {
     display: inline-block;
-    background-color: #FF6600;
+    backgroundHAS-color: #FF6600;
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -203,6 +203,10 @@
     .mb-3 { margin-bottom: 1rem !important; }
     .service-item-top .overflow-hidden { height: auto !important; }
     .service-carousel .bg-light { min-height: auto; padding: 15px !important; }
+    .fact .row g-4 { flex-direction: column; }
+    .accordion-item .accordion-button { font-size: 1.1rem; }
+    table.table { font-size: 1rem; }
+    table.table td, table.table td { padding: 0.75rem; }
     }
     body { overflow-x: hidden; }
     .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
@@ -210,17 +214,43 @@
     .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
     /* Smooth scrolling for anchor links */
     html { scroll-behavior: smooth; }
-    /* Modern Badge in Navbar - Neat alignment next to About Us */
+    /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
+    #reviewsio-carousel-widget {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    z-index: 1000;
+    }
+    /* Modern Badge in Navbar - Horizontal/oblong layout, visible on all screens, responsive sizing */
     #badge-160 {
-        max-width: 180px !important;
+        max-width: 200px !important; /* Wider for oblong/horizontal shape */
         display: inline-block;
     }
     .navbar-badge {
         padding: 0.5rem 1rem;
+        align-items: center;
+    }
+    /* Responsive adjustments for neat fit on all devices */
+    @media (max-width: 1199px) {
+        #badge-160 {
+            max-width: 180px !important;
+        }
     }
     @media (max-width: 991px) {
+        #badge-160 {
+            max-width: 160px !important;
+        }
         .navbar-badge {
-            display: none !important; /* Hide on smaller screens if space is tight */
+            padding: 0.5rem 0.5rem;
+        }
+    }
+    @media (max-width: 767px) {
+        #badge-160 {
+            max-width: 140px !important; /* Smaller on mobile but still visible and oblong */
+        }
+        .navbar-badge {
+            padding: 0.3rem 0.5rem;
+            justify-content: center;
         }
     }
     </style>
@@ -249,7 +279,7 @@
     }
     }
     </script>
-    <!-- Reviews.io Badge Loader (carousel removed to avoid full reviews showing) -->
+    <!-- Reviews.io Badge Loader -->
     <script src="https://widget.reviews.io/badge-modern/dist.js"></script>
 </head>
 <body>
@@ -316,9 +346,9 @@
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
-                <!-- Neat Reviews Badge placed on the right next to "About Us" in the navbar -->
-                <div class="navbar-badge d-none d-lg-flex align-items-center">
-                    <div id="badge-160" style="max-width:160px;"></div>
+                <!-- Neat Reviews Badge placed on the right next to "About Us" in the navbar (visible on all screens, oblong/horizontal shape) -->
+                <div class="navbar-badge d-flex align-items-center">
+                    <div id="badge-160" style="max-width:200px;"></div>
                 </div>
             </div>
         </nav>
@@ -366,7 +396,7 @@
                         <img class="img-fluid w-100 h-100" src="aa1.jpg" alt="Senior receiving care – Attendance Allowance" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
-                        <h5 class="text-truncate me-3 mb-0">'attaque Allowance</h5>
+                        <h5 class="text-truncate me-3 mb-0">Attendance Allowance</h5>
                         <i class="fa fa-arrow-right text-primary"></i>
                     </div>
                 </a>
@@ -392,8 +422,6 @@
         </div>
     </div>
     <!-- Service End -->
-
-    <!-- (All remaining sections - About, Stats, Fact, Services Carousel, Call to Action, Booking, Testimonial, FAQ Teaser, Footer - are unchanged and fully included below) -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -535,7 +563,7 @@
                             </div>
                             <h4 class="mb-3"><a href="eligibility-attendance-allowance.html">Attendance Allowance Claim Help</a></h4>
                             <p>Financial support for those over 66 with health-related daily living needs – up to £5,741 per year. We manage your application from start to finish.</p>
-                            <p classTimes class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>No means-testing</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Possible backdated payments</p>
                             <a href="eligibility-attendance-allowance.html" class="btn btn-primary mt-3">Check Eligibility →</a>
@@ -570,7 +598,7 @@
     <!-- Services Carousel End -->
 
     <!-- Call to Action Section -->
-    <div class="container-xxl py-5 bg-primary text-white">
+    <div class="container-xxl(py-5 bg-primary text-white">
         <div class="container text-center">
             <h2 class="mb-4">Ready to Claim What You're Entitled To?</h2>
             <p class="mb-4">Many people over 66 miss out on thousands of pounds every year. Start your free eligibility check today – no obligation, no upfront cost.</p>
@@ -867,12 +895,13 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Reviews.io Modern Badge Initialisation (carousel fully removed to prevent full reviews showing) -->
+    <!-- Reviews.io Modern Badge Initialisation (horizontal/oblong layout where supported, responsive sizing) -->
     <script>
         reviewsBadgeModern('badge-160', {
             store: 'claimfor.me.uk',
             primaryClr: '#FF6600',
-            starsClr: '#FF6600'
+            starsClr: '#FF6600',
+            layout: 'horizontal'  // Forces oblong/horizontal shape if the widget supports it (most modern ones do)
         });
     </script>
 </body>
