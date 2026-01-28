@@ -5,7 +5,7 @@
     <title>Claim Benefits Over 66 | Attendance Allowance & Pension Credit | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
-    <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
+    <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 0800 054 8484 for free eligibility check.">
     
     <!-- Trustpilot domain verification -->
     <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
@@ -128,7 +128,7 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
     }
-    /* Intro Video Modal - Full screen, hide navbar/topbar when open, video stops on close */
+    /* Intro Video Modal - Full screen, highest z-index, completely covers/hides navbar/topbar */
     #introVideoModal { z-index: 9999 !important; }
     #introVideoModal .modal-backdrop { z-index: 9998 !important; background: rgba(0,0,0,0.95); }
     #introVideoModal .modal-content { background: transparent; border: none; height: 100vh; width: 100vw; }
@@ -140,15 +140,12 @@
     @media (max-width: 767px) {
         #introVideoModal video { width: 100%; max-height: 70vh; }
     }
-    /* Hide navbar and topbar when modal is open */
-    .modal-open .[]
-
-    /* Hide navbar and topbar when modal is open */
-    .modal-open .top-bar, .modal-open .nav-bar { display: none !important; }
+    /* Force hide navbar and topbar when modal is open */
+    .modal-open .top-bar, .modal-open .nav-bar { display: none !important; visibility: hidden !important; }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
-    {"@context": "https://schema.org","@type": "LocalBusiness","name": "Claim For Me","url": "https://www.claimfor.me.uk/","telephone": "020 7122 8324","priceRange": "$$","address": {"@type": "PostalAddress","streetAddress": "Office 123, Example House","addressLocality": "London","addressRegion": "London","postalCode": "EC1A 1BB","addressCountry": "GB"},"openingHoursSpecification": {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"}}
+    {"@context": "https://schema.org","@type": "LocalBusiness","name": "Claim For Me","url": "https://www.claimfor.me.uk/","telephone": "0800 054 8484","priceRange": "$$","address": {"@type": "PostalAddress","streetAddress": "Office 123, Example House","addressLocality": "London","addressRegion": "London","postalCode": "EC1A 1BB","addressCountry": "GB"},"openingHoursSpecification": {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"}}
     </script>
     <!-- Reviews.io Carousel Loader -->
     <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
@@ -162,7 +159,7 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, fully covers navbar/topbar by hiding them) -->
+    <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, fully covers/hides navbar/topbar) -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -193,11 +190,11 @@
             <div class="col-lg-6 col-md-12 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
                     <div class="me-5 text-end">
-                        <p class="mb-0 topbar-phone">020 7122 8324</p>
+                        <p class="mb-0 topbar-phone">0800 054 8484</p>
                         <p class="mb-0 topbar-email">Call us anytime for help</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank" title="WhatsApp us for quick help!">
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/448000548484" target="_blank" title="WhatsApp us for quick help!">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -215,7 +212,7 @@
                     <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
                 </h1>
             </a>
-           <br>            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -332,7 +329,7 @@
                         </div>
                         <div class="ms-3">
                             <p class="fs-5 fw-medium mb-2 text-white">Call for Free Eligibility Check</p>
-                            <h3 class="m-0 text-secondary">020 7122 8324</h3>
+                            <h3 class="m-0 text-secondary">0800 054 8484</h3>
                         </div>
                     </div>
                 </div>
@@ -349,7 +346,7 @@
 
     <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
-        <div  <div class="container">
+        <div class="container">
             <div class="text-center">
                 <h2 class="text-secondary text-uppercase">Benefits Statistics UK</h2>
                 <h2 class="mb-5">Key Facts About Unclaimed Benefits</h2>
@@ -405,7 +402,7 @@
     </div>
     <!-- Stats End -->
 
-    <!-- Fact Start (4 oblong boxes with brief descriptions – fully restored) -->
+    <!-- Fact Start (4 oblong boxes with brief descriptions) -->
     <div class="container-fluid fact my-5 py-5">
         <div class="container">
             <div class="row g-4">
@@ -514,7 +511,7 @@
                             <h2 class="mb-0">Request a Call Back</h2>
                         </div>
                         <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
-                        <form action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
+                        <form action="https://formsubmit.co/info@claimfor.me.uk" method="POST">
                             <!-- Hidden settings -->
                             <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
                             <input type="hidden" name="_template" value="table">
@@ -717,9 +714,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0800 054 8484 – Call for Attendance Allowance & Pension Credit Help</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/448000548484" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -745,7 +742,7 @@
                     <p>Get in touch for benefits tips or to request a call back about Attendance Allowance, Pension Credit, or Blue Badge.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" name="message" placeholder="Your Message">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="location.href='mailto:claimsformeuk@gmail.com?subject=Call Back Request&body=' + encodeURIComponent(document.querySelector('input[placeholder=\"Your Message\"]').value)">Send Request</button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="location.href='mailto:info@claimfor.me.uk?subject=Call Back Request&body=' + encodeURIComponent(document.querySelector('input[placeholder=\"Your Message\"]').value)">Send Request</button>
                     </div>
                 </div>
             </div>
