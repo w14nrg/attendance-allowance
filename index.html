@@ -30,10 +30,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- TrustBox script (loader) -->
-    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-
-    <!-- Color Scheme & Font Overrides + Trustpilot tweaks -->
+    <!-- Color Scheme & Font Overrides + Manual Trustpilot MicroCombo-style badge -->
     <style>
         /* Your existing styles (unchanged) */
         .text-primary { color: #FF6600 !important; }
@@ -174,61 +171,60 @@
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
         html { scroll-behavior: smooth; }
 
-        /* Trustpilot widgets container – side-by-side on desktop, stacked on mobile */
-        .trustpilot-container {
+        /* Manual Trustpilot MicroCombo-style badge – visible on all devices */
+        .trustpilot-badge-container {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
             justify-content: flex-end;
+            align-items: center;
         }
         @media (max-width: 991px) {
-            .trustpilot-container {
+            .trustpilot-badge-container {
                 justify-content: center;
                 margin-top: 10px;
             }
         }
 
-        /* Manual trust score badge – edit the score/review count here */
-        .manual-trust-badge {
+        .manual-microcombo-badge {
             background-color: #fff;
             border: 1px solid #e0e0e0;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 8px 12px;
             font-family: 'Open Sans', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #000;
-            text-align: center;
-            min-width: 180px;
+            text-align: left;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             height: 52px;
+            min-width: 280px;
         }
-        .manual-trust-badge a {
+        .manual-microcombo-badge a {
             text-decoration: none;
             color: inherit;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
-        .manual-trust-badge .score {
+        .manual-microcombo-badge .excellent {
+            color: #00b67a; /* Trustpilot green */
             font-weight: bold;
-            font-size: 1.1rem;
         }
-        .manual-trust-badge .stars {
-            color: #FFB100; /* Trustpilot-style gold/orange stars */
+        .manual-microcombo-badge .score {
+            font-weight: bold;
+            font-size: 1.2rem;
         }
-        .manual-trust-badge .reviews {
+        .manual-microcombo-badge .stars {
+            color: #ffb100; /* Trustpilot gold */
+        }
+        .manual-microcombo-badge .reviews {
             font-size: 0.85rem;
             color: #666;
         }
-
-        /* Trustpilot Review Collector tweaks */
-        .trustpilot-review-collector iframe {
-            height: 52px !important;
-            width: 100% !important;
+        .manual-microcombo-badge .trustpilot-text {
+            font-size: 0.8rem;
+            color: #666;
         }
     </style>
 
@@ -317,35 +313,28 @@
                             <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
                             <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
                         </ul>
+                    <
                     </div>
                     <a href="how-it-works.html" class="nav-item nav-link">How It Works</a>
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
 
-                <!-- Trustpilot widgets – visible on all devices (desktop + mobile) -->
+                <!-- Manual MicroCombo-style Trustpilot badge – visible on all devices -->
                 <div class="navbar-nav ms-auto align-items-center pe-3">
-                    <div class="trustpilot-container">
-                        <!-- Manual trust score badge – EDIT SCORE & REVIEW COUNT HERE -->
-                        <div class="manual-trust-badge">
+                    <div class="trustpilot-badge-container">
+                        <div class="manual-microcombo-badge">
                             <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
+                                <span class="excellent">Excellent</span>
                                 <span class="score">5.0</span>
                                 <span class="stars">
                                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                                 </span>
                                 <span class="reviews">(100 reviews)</span>
+                                <span class="trustpilot-text">Trustpilot</span>
                             </a>
                         </div>
-                        <!-- End manual badge (edit the numbers/text above anytime) -->
-
-                        <!-- Trustpilot Review Collector (free plan button) -->
-                        <div class="trustpilot-review-collector">
-                            <!-- TrustBox widget - Review Collector -->
-                            <div class="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6977bbd701b445270c24b18e" data-style-height="52px" data-style-width="100%" data-token="3d3f3d37-4805-4c0f-bcbf-ad7510d5c8e1">
-                                <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">Trustpilot</a>
-                            </div>
-                            <!-- End TrustBox widget -->
-                        </div>
+                        <!-- EDIT HERE: Change "Excellent", score "5.0", review count "(100 reviews)", and star fill as needed -->
                     </div>
                 </div>
             </div>
@@ -353,7 +342,7 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Hero Section Start -->
+    <!-- Hero Section Start - Static text + flashing orange badge -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
@@ -365,7 +354,7 @@
     </div>
     <!-- Hero Section End -->
 
-    <!-- Frustrations Section -->
+    <!-- Frustrations Section (moved up for better flow) -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="row g-5 align-items-center">
@@ -431,7 +420,7 @@
                     <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
-                    <p class="fw-medium text="text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
@@ -567,7 +556,7 @@
                             <a href="eligibility-attendance-allowance.html" class="btn btn-primary mt-3">Check Eligibility →</a>
                         </div>
                         <div class="bg-light p-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-wallet fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3"><a href="eligibility-pension-credit.html">Pension Credit Claim Assistance</a></h4>
@@ -624,7 +613,7 @@
                             <!-- Hidden settings -->
                             <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
                             <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_captchastrain" value="false">
                             <!-- Honeypot anti-spam -->
                             <input type="text" name="_honey" style="display:none">
                             <!-- Personal Details -->
@@ -659,7 +648,7 @@
                                     <div id="collapseEligibility" class="accordion-collapse collapse" aria-labelledby="headingEligibility" data-bs-parent="#eligibilityAccordion">
                                         <div class="accordion-body text-start">
                                             <div class="mb-4">
-                                                <p class="fw-bold mb-3">1. Are you aged 66 or older?  *</p>
+                                                <p class="fw-bold mb-3">1. Are you aged 66 or older? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="1. Are you aged 66 or older?" id="age_yes" value="Yes" required>
@@ -744,7 +733,7 @@
                 <h2 class="mb-5">What Our Clients Say</h2>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonials-item text-center">
+                <div class="testimonial-item text-center">
                     <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
@@ -781,7 +770,7 @@
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
-                        <small class="fa fa-star text-primary"></small>
+                        <small class="faa fa-star text-primary"></small>
                     </div>
                     <h5 class="mb-1">Michael Brown</h5>
                     <p class="m-0">Client, England</p>
@@ -833,7 +822,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Opening Hours - Benefits Claim Support</h4>
                     <h6>Monday - Sunday:</h6>
-                    <p class="mb-0">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
+                    <p class="45 mb-0">Flexible – Callutung or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Our Services</h4>
