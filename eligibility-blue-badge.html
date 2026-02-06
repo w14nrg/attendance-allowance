@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blue Badge Eligibility Quiz | Parking Permit Support | Claim For Me</title>
+    <title>Blue Badge Eligibility Questionnaire | Parking Permit Support | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <meta name="description" content="Free 25-question Blue Badge eligibility quiz. Answers reviewed by experts – no obligation, success-based fee from £99.">
+    <meta name="description" content="Free 25-question Blue Badge eligibility questionnaire. Answers reviewed by experts – no obligation, success-based fee from £99.">
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
     <!-- Google Web Fonts -->
@@ -22,22 +22,50 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Soft Colour/Font Scheme -->
+    <!-- Color Scheme & Font Overrides (matched to index) -->
     <style>
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
         .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
         .bg-light { background-color: #f8f8f8 !important; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif !important; color: #333333 !important; }
-        body, p, label, .form-check-label { font-family: 'Open Sans', sans-serif !important; color: #444444 !important; font-size: 1.1rem !important; }
-        .navbar-light .navbar-nav .nav-link { color: #444444 !important; }
-        .navbar-light .navbar-nav .nav-link:hover, .nav-link.active { color: #FF6600 !important; }
+        h1, h2, h3, h4, h5, h6, .display-3 {
+            font-family: 'Merriweather', serif !important;
+            font-weight: 700 !important;
+            color: #333333 !important;
+            line-height: 1.3 !important;
+        }
+        .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
+        .navbar-brand h1 { font-family: 'Merriweather', serif !important; font-weight: 700 !important; font-size: 2.6rem !important; color: #333333 !important; margin: 0; }
+        .navbar-brand .logo-c { color: #FF6600 !important; }
+        .navbar-brand .logo-rest {
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #FF6600;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 6px;
+        }
+        body, p, li, label, .form-check-label {
+            font-family: 'Open Sans', sans-serif !important;
+            color: #444444 !important;
+            font-size: 1.1rem !important;
+            line-height: 1.6 !important;
+        }
+        .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; }
+        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #FF6600 !important; }
         .nav-bar { background-color: #ffffff !important; }
+        .topbar-phone {
+            font-size: 1.8rem !important;
+            font-weight: 800 !important;
+            line-height: 1.2 !important;
+            color: #FF6600 !important;
+        }
+        @media (max-width: 991px) {
+            .topbar-phone { font-size: 1.6rem !important; }
+        }
         .quiz-step { display: none; }
         .quiz-step.active { display: block; }
         .progress { height: 10px; }
         .form-check-input:checked { background-color: #FF6600; border-color: #FF6600; }
-        .bg-dark { background-color: #808080 !important; }
         .button-group { display: flex; justify-content: space-between; margin-top: 30px; }
         .button-group .btn { min-width: 120px; }
         .error-message { color: red; font-size: 0.9rem; margin-top: 5px; display: none; }
@@ -54,35 +82,36 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row align-items-center top-bar">
+
+    <!-- Topbar Start (matched to index) -->
+    <div class="container-fluid bg-light d-none d-lg-block top-bar">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 text-center text-lg-start">
                 <a href="index.html" class="navbar-brand m-0 p-0">
-                    <h1 class="m-0">Claim For Me</h1>
+                    <h1 class="m-0">
+                        <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
+                    </h1>
                 </a>
             </div>
             <div class="col-lg-6 col-md-12 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
                     <div class="me-5 text-end">
-                        <p class="mb-0 topbar-phone">020 7122 8324</p>
-                        <p class="mb-0 topbar-email">Call us anytime for help</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
+                        <p class="mb-0 topbar-email">Call us anytime – it's free</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-    <!-- Navbar Start -->
+
+    <!-- Navbar Start (matched to index, Blue Badge active) -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="m-0">Claim For Me</h1>
+                <h1 class="m-0">
+                    <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
+                </h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -100,6 +129,7 @@
                             <li><a class="dropdown-item active" href="eligibility-blue-badge.html">Blue Badge</a></li>
                         </ul>
                     </div>
+                    <a href="how-it-works.html" class="nav-item nav-link">How It Works</a>
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
@@ -107,15 +137,18 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <!-- Hero Start - Back to original text -->
+
+    <!-- Hero Start -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
-            <h1 class="display-3 mb-4">Blue Badge<br><span class="text-primary">25-Question Eligibility Quiz</span></h1>
+            <h1 class="display-3 mb-4">Blue Badge<br><span class="text-primary">25-Question Eligibility Questionnaire</span></h1>
             <p class="fs-4 mb-4">Your answers will be emailed to our experts for free review and follow-up call.</p>
-            <a href="tel:02071228324" class="btn btn-primary py-3 px-5">Call Now: 020 7122 8324</a>
+            <p class="fs-3 text-primary fw-bold mb-4">Freephone 0800 054 8484</p>
+            <a href="tel:08000548484" class="btn btn-primary py-3 px-5">Call Freephone Now</a>
         </div>
     </div>
     <!-- Hero End -->
+
     <!-- Explanation Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -130,31 +163,33 @@
                         <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Cost:</strong> Up to £10 (varies by council), valid 3 years.</li>
                         <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>How it works:</strong> Your local council assesses the application – we handle the full process, evidence gathering, and appeals if needed.</li>
                     </ul>
-                    <p>We specialise in Blue Badge applications – high success rate. Success-based fee from £99 only if approved.</p>
+                    <p>Success-based fee from £99 only if approved.</p>
                 </div>
                 <div class="col-lg-6">
                     <img class="img-fluid rounded" src="aa3.jpg" alt="Blue Badge parking permit card">
                 </div>
             </div>
             <div class="text-center mt-5">
-                <p class="fs-5 fw-bold">Complete the quiz below – we will review your answers and call you.</p>
+                <p class="fs-5 fw-bold">Complete the questionnaire below – we will review your answers and call you.</p>
             </div>
         </div>
     </div>
     <!-- Explanation End -->
-    <!-- Quiz Form Start -->
+
+    <!-- Questionnaire Form Start -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">25-Question Eligibility Quiz</h2>
+            <h2 class="text-center mb-4">25-Question Eligibility Questionnaire</h2>
             <p class="text-center mb-5">Answer Yes or No to each question. The more "Yes" answers in relevant sections, the stronger the potential case.</p>
             <div class="progress mb-5">
                 <div class="progress-bar bg-primary" id="progressBar" style="width: 0%;"></div>
             </div>
             <form id="quizForm" action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="New Blue Badge Quiz Submission">
-                <input type="hidden" name="_autoresponse" value="Thank you for completing the Blue Badge eligibility quiz. We have received your answers and will call you soon to discuss next steps.">
+                <input type="hidden" name="_subject" value="New Blue Badge Questionnaire Submission">
+                <input type="hidden" name="_autoresponse" value="Thank you for completing the Blue Badge eligibility questionnaire. We have received your answers and will call you soon to discuss next steps.">
                 <input type="hidden" name="Outcome" id="outcomeHidden" value="">
+
                 <!-- Question 1 -->
                 <div class="quiz-step active" id="step1">
                     <h5>1. Do you receive the higher rate mobility component of Disability Living Allowance (DLA)?</h5>
@@ -172,6 +207,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 2 -->
                 <div class="quiz-step" id="step2">
                     <h5>2. Do you receive 8 or more points in the 'moving around' activity of Personal Independence Payment (PIP)?</h5>
@@ -189,6 +225,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 3 -->
                 <div class="quiz-step" id="step3">
                     <h5>3. Do you receive the War Pensioners' Mobility Supplement?</h5>
@@ -206,6 +243,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(3)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 4 -->
                 <div class="quiz-step" id="step4">
                     <h5>4. Do you receive a lump sum from the Armed Forces Compensation Scheme (tariffs 1-8) and have been certified as having a permanent and substantial disability?</h5>
@@ -223,6 +261,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(4)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 5 -->
                 <div class="quiz-step" id="step5">
                     <h5>5. Are you registered as severely sight impaired (blind)?</h5>
@@ -240,6 +279,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(5)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 6 -->
                 <div class="quiz-step" id="step6">
                     <h5>6. Do you have a permanent and substantial disability that causes inability to walk or very considerable difficulty in walking?</h5>
@@ -257,6 +297,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(6)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 7 -->
                 <div class="quiz-step" id="step7">
                     <h5>7. Can you walk more than 50 metres without stopping or severe discomfort?</h5>
@@ -274,6 +315,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(7)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 8 -->
                 <div class="quiz-step" id="step8">
                     <h5>8. Do you experience very considerable psychological distress when walking outdoors?</h5>
@@ -291,6 +333,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(8)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 9 -->
                 <div class="quiz-step" id="step9">
                     <h5>9. Do you pose a risk of serious harm to yourself or others when walking outdoors in unfamiliar places?</h5>
@@ -308,6 +351,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(9)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 10 -->
                 <div class="quiz-step" id="step10">
                     <h5>10. Do you drive regularly and have a severe disability in both arms that prevents you from operating parking meters?</h5>
@@ -325,6 +369,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(10)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 11 -->
                 <div class="quiz-step" id="step11">
                     <h5>11. Is the application for a child under 3 years old who needs bulky medical equipment for transport?</h5>
@@ -342,6 +387,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(11)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 12 -->
                 <div class="quiz-step" id="step12">
                     <h5>12. Is the application for a child under 3 years old with a medical condition requiring constant close proximity to a vehicle for treatment?</h5>
@@ -359,6 +405,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(12)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 13 -->
                 <div class="quiz-step" id="step13">
                     <h5>13. Do you experience excessive pain when walking?</h5>
@@ -376,6 +423,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(13)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 14 -->
                 <div class="quiz-step" id="step14">
                     <h5>14. Do you become breathless or have difficulty breathing when walking?</h5>
@@ -393,6 +441,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(14)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 15 -->
                 <div class="quiz-step" id="step15">
                     <h5>15. Do you walk very slowly or with an abnormal gait?</h5>
@@ -410,6 +459,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(15)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 16 -->
                 <div class="quiz-step" id="step16">
                     <h5>16. Do you use walking aids or need assistance from another person to walk outdoors?</h5>
@@ -427,6 +477,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(16)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 17 -->
                 <div class="quiz-step" id="step17">
                     <h5>17. Do you have a non-visible (hidden) condition that causes severe distress or risk when walking?</h5>
@@ -444,6 +495,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(17)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 18 -->
                 <div class="quiz-step" id="step18">
                     <h5>18. Do you have difficulty planning or following journeys due to a cognitive or mental health condition?</h5>
@@ -461,6 +513,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(18)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 19 -->
                 <div class="quiz-step" id="step19">
                     <h5>19. Do you have a terminal illness with less than 12 months prognosis?</h5>
@@ -478,6 +531,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(19)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 20 -->
                 <div class="quiz-step" id="step20">
                     <h5>20. Are you applying as a driver?</h5>
@@ -495,6 +549,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(20)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 21 -->
                 <div class="quiz-step" id="step21">
                     <h5>21. Are you applying as a passenger?</h5>
@@ -512,6 +567,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(21)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 22 -->
                 <div class="quiz-step" id="step22">
                     <h5>22. Do you have a vehicle registered in your name?</h5>
@@ -529,6 +585,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(22)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 23 -->
                 <div class="quiz-step" id="step23">
                     <h5>23. Have you had a Blue Badge refused or withdrawn in the last 12 months?</h5>
@@ -546,6 +603,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(23)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 24 -->
                 <div class="quiz-step" id="step24">
                     <h5>24. Do you live in the UK and are applying through your local council?</h5>
@@ -563,6 +621,7 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(24)">Next →</button>
                     </div>
                 </div>
+
                 <!-- Question 25 -->
                 <div class="quiz-step" id="step25">
                     <h5>25. Have you had any parking penalties or Blue Badge misuse in the past?</h5>
@@ -577,13 +636,14 @@
                     <div class="error-message" id="error25">Please select Yes or No</div>
                     <div class="button-group">
                         <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
-                        <button type="button" class="btn btn-primary" onclick="calculateAndShowResult()">Finish Quiz →</button>
+                        <button type="button" class="btn btn-primary" onclick="calculateAndShowResult()">Finish Questionnaire →</button>
                     </div>
                 </div>
+
                 <!-- Qualified Result Section -->
                 <div class="result-section" id="qualifiedResult">
                     <h3 class="text-primary">Great news – strong indication of eligibility!</h3>
-                    <p>Based on your answers, you appear to meet key criteria for a Blue Badge.</p>
+                    <p>Based on your answers to the questionnaire, you appear to meet key criteria for a Blue Badge.</p>
                     <p>Please provide your details below so we can call you to confirm and assist with the application (free review).</p>
                     <div class="row g-3 mt-4">
                         <div class="col-md-6">
@@ -609,25 +669,101 @@
                     </div>
                     <button type="submit" class="btn btn-primary mt-4 px-5 py-3">Submit & Get Expert Help</button>
                 </div>
+
                 <!-- Rejected Result Section -->
                 <div class="result-section rejected" id="rejectedResult">
-                    <h3>Thank you for completing the quiz</h3>
+                    <h3>Thank you for completing the questionnaire</h3>
                     <p>Unfortunately, based on your answers, it seems you may not currently meet the main Blue Badge eligibility criteria.</p>
                     <p>We only assist with strong cases to ensure the best outcomes.</p>
-                    <a href="tel:02071228324" class="btn btn-primary mt-3 px-5">Call Us: 020 7122 8324</a><br><br>
+                    <a href="tel:08000548484" class="btn btn-primary mt-3 px-5">Call Freephone: 0800 054 8484</a><br><br>
                     <a href="index.html" class="btn btn-outline-primary">Back to Home</a>
                 </div>
+
                 <!-- Thank You Message -->
                 <div class="thank-you" id="thankYou">
                     <h3>Thank You!</h3>
-                    <p>Your quiz answers and details have been sent successfully.</p>
+                    <p>Your questionnaire answers and details have been sent successfully.</p>
                     <p>We will review them and call you soon to discuss next steps.</p>
                     <a href="index.html" class="btn btn-primary mt-3">Back to Home</a>
                 </div>
             </form>
         </div>
     </div>
-    <!-- Quiz Form End -->
+    <!-- Questionnaire Form End -->
+
+    <!-- Footer Start (exact match to index) -->
+    <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="mb-4">Contact Claim For Me</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><strong>Freephone 0800 054 8484</strong> – Call for Attendance Allowance & Pension Credit Help</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="mb-4">Opening Hours - Benefits Claim Support</h4>
+                    <h6>Monday - Sunday:</h6>
+                    <p class="mb-0">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="mb-4">Our Services</h4>
+                    <p class="btn btn-link">Attendance Allowance Claims</p>
+                    <p class="btn btn-link">Pension Credit Applications</p>
+                    <p class="btn btn-link">Blue Badge Support</p>
+                    <p class="btn btn-link">Free Eligibility Checks</p>
+                    <p class="btn btn-link">Full Application Guidance</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-phone-alt fa-3x text-primary me-3"></i>
+                        <h4 class="">Request a Call Back or Updates</h4>
+                    </div>
+                    <p>Get in touch for benefits tips or to request a call back about Attendance Allowance, Pension Credit, or Blue Badge.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" name="message" placeholder="Your Message">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="location.href='mailto:info@claimfor.me.uk?subject=Call Back Request&body=' + encodeURIComponent(document.querySelector('input[placeholder=\"Your Message\"]').value)">Send Request</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center">
+                    <h5 class="mb-3">Don't miss out on valuable benefits</h5>
+                    <p class="text-muted">Many people over State Pension age are missing thousands of pounds each year. Get your free eligibility check today.</p>
+                    <a href="#top" class="btn btn-outline-primary py-3 px-5 mt-2">Choose a Benefit Above</a>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="copyright text-center">
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for People Over State Pension Age – No Upfront Fees.<br>
+                    Company number 17002345
+                    <div class="footer-links">
+                        <a href="faq.html">FAQ</a> |
+                        <a href="privacy-policy.html">Privacy Policy</a> |
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Questionnaire Script -->
     <script>
         const totalSteps = 25;
         const steps = Array.from({length: totalSteps}, (_, i) => `step${i+1}`);
@@ -673,11 +809,9 @@
                 document.getElementById('error25').style.display = 'block';
                 return;
             }
-
             let points = 0;
             const autoEligible = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q11', 'Q12'];
             const hasAuto = autoEligible.some(q => getValue(q) === 'Yes');
-
             if (hasAuto) {
                 points = 100;
             } else {
@@ -694,13 +828,11 @@
                 if (getValue('Q18') === 'Yes') points += 8;
                 if (getValue('Q19') === 'Yes') points += 10;
             }
-
             if (getValue('Q24') === 'No') points = 0;
             if (getValue('Q25') === 'Yes') points = 0;
             if (getValue('Q23') === 'Yes') points = Math.max(0, points - 50);
 
             const isStrong = points >= 70;
-
             document.getElementById('outcomeHidden').value = isStrong ? 'Strong case (≥70%)' : 'Weak case (<70%)';
 
             document.getElementById('step25').classList.remove('active');
@@ -711,7 +843,6 @@
             } else {
                 document.getElementById('rejectedResult').style.display = 'block';
             }
-
             document.getElementById('progressBar').style.width = '100%';
         }
 
@@ -724,80 +855,15 @@
 
         updateProgress();
     </script>
+
     <!-- Spinner Hide -->
     <script>
         window.addEventListener('load', function() {
             const spinner = document.getElementById('spinner');
-            if (spinner) spinner.classList.remove('show');
+            if (spinner) {
+                spinner.classList.remove('show');
+            }
         });
     </script>
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours - Benefits Claim Support</h4>
-                    <h6 class="text-light">Monday - Sunday:</h6>
-                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
-                    <h6 class="text-light">Holidays:</h6>
-                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Our Services</h4>
-                    <p class="btn btn-link">Attendance Allowance Claims</p>
-                    <p class="btn btn-link">Pension Credit Applications</p>
-                    <p class="btn btn-link">Blue Badge Support</p>
-                    <p class="btn btn-link">Free Eligibility Checks</p>
-                    <p class="btn btn-link">Full Application Guidance</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter - Benefits Tips Over 66</h4>
-                    <p>Subscribe for updates and tips on claiming Attendance Allowance, Pension Credit, Blue Badge and other benefits for people over State Pension age.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-8 text-center">
-                    <h5 class="text-light mb-3">Don't miss out on benefits you're entitled to</h5>
-                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year. Get your free eligibility check today.</p>
-                    <a href="index.html" class="btn btn-outline-primary py-3 px-5 mt-2">Back to Home</a>
-                </div>
-            </div>
-            <div class="container mt-5">
-                <div class="copyright text-center">
-                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 </html>
