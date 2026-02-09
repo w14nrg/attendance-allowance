@@ -30,7 +30,7 @@
  <!-- Reviews.io Carousel Widget CSS -->
  <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
  <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
- <!-- Color Scheme & Font Overrides + VERY LARGE Logo Styles -->
+ <!-- Color Scheme & Font Overrides + Large Logo Styles -->
  <style>
  /* Primary colour: soft navy blue */
  .text-primary { color: #355C7D !important; }
@@ -157,29 +157,36 @@
      font-size: 1.6rem !important;
    }
  }
- /* VERY LARGE LOGO – fills most of header on both desktop and mobile */
+ /* Large logo – fills most of header */
  .logo-img {
-   height: 200px; /* Massive on desktop – dominates the topbar */
+   height: 150px; /* Large on desktop */
    width: auto;
    object-fit: contain;
  }
  .top-bar .row {
-   min-height: 220px; /* Tall topbar to fit huge logo */
+   min-height: 170px; /* Tall topbar for big logo */
    align-items: center;
  }
  @media (max-width: 991px) {
    .logo-img {
-     height: 150px; /* Still massive on mobile – dominates navbar */
+     height: 100px; /* Large on mobile */
    }
    .nav-bar {
-     min-height: 180px; /* Tall navbar to fit huge logo */
-     padding-top: 2rem;
-     padding-bottom: 2rem;
+     min-height: 130px; /* Tall navbar for big logo */
+     padding-top: 1rem;
+     padding-bottom: 1rem;
    }
-   /* Massive hero top padding on small screens so content is NEVER hidden */
+   /* Extra hero padding on small screens so content is never hidden */
    .container-fluid.bg-light.py-5.mb-5 {
-     padding-top: 12rem !important;
+     padding-top: 9rem !important;
    }
+ }
+ /* Fallback text logo if image fails to load */
+ .fallback-logo {
+   display: none;
+ }
+ .logo-img:error + .fallback-logo {
+   display: block;
  }
  </style>
  <!-- Local Business Schema -->
@@ -218,12 +225,16 @@
  <div class="container-fluid bg-light d-none d-lg-block top-bar">
  <div class="row align-items-center">
  <div class="col-lg-6 text-center text-lg-start">
- <a href="index.html" class="navbar-brand m-0 p-0">
-   <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img">
+ <a href="index.html" class="navbar-brand m-0 p-0 d-flex align-items-center">
+   <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img me-3">
+   <div class="fallback-logo">
+     <h1 class="m-0">Claim For Me</h1>
+     <p class="mb-0 text-primary fw-bold" style="font-size: 1.3rem;">Helping you claim with confidence</p>
+   </div>
  </a>
  </div>
  <div class="col-lg-6 text-end">
- <div class="h-100 d-inline-flex align-items-center">
+ <div class="h-100 d-inline-flex align-items-center justify-content-end">
  <div class="me-5 text-end">
  <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
  <p class="mb-0 topbar-email">Call us anytime – it's free</p>
@@ -236,12 +247,20 @@
  <!-- Navbar Start (Mobile + Menu) -->
  <div class="container-fluid nav-bar bg-light">
  <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-4">
- <a href="index.html" class="navbar-brand m-0 p-0 d-lg-none">
-   <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img">
- </a>
- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
- <span class="fa fa-bars"></span>
- </button>
+ <div class="d-flex w-100 justify-content-between align-items-center">
+   <a href="index.html" class="navbar-brand m-0 p-0 d-flex align-items-center">
+     <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img me-3">
+     <div class="fallback-logo">
+       <h1 class="m-0">Claim For Me</h1>
+     </div>
+   </a>
+   <div class="d-lg-none text-end me-3">
+     <p class="mb-0 topbar-phone" style="font-size: 1.4rem;">Freephone 0800 054 8484</p>
+   </div>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+     <span class="fa fa-bars"></span>
+   </button>
+ </div>
  <div class="collapse navbar-collapse" id="navbarCollapse">
  <div class="navbar-nav me-auto">
  <a href="index.html" class="nav-item nav-link active">Home</a>
