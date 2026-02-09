@@ -30,7 +30,7 @@
  <!-- Reviews.io Carousel Widget CSS -->
  <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
  <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
- <!-- Color Scheme & Font Overrides + Larger Logo Styles -->
+ <!-- Color Scheme & Font Overrides + VERY LARGE Logo Styles -->
  <style>
  /* Primary colour: soft navy blue */
  .text-primary { color: #355C7D !important; }
@@ -157,19 +157,28 @@
      font-size: 1.6rem !important;
    }
  }
- /* Larger logo styles */
+ /* VERY LARGE LOGO – fills most of header on both desktop and mobile */
  .logo-img {
-   max-height: 120px; /* Larger on desktop */
+   height: 200px; /* Massive on desktop – dominates the topbar */
    width: auto;
-   display: block;
+   object-fit: contain;
+ }
+ .top-bar .row {
+   min-height: 220px; /* Tall topbar to fit huge logo */
+   align-items: center;
  }
  @media (max-width: 991px) {
    .logo-img {
-     max-height: 80px; /* Larger on mobile */
+     height: 150px; /* Still massive on mobile – dominates navbar */
    }
-   /* Extra hero padding on small screens to avoid any overlap */
+   .nav-bar {
+     min-height: 180px; /* Tall navbar to fit huge logo */
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+   }
+   /* Massive hero top padding on small screens so content is NEVER hidden */
    .container-fluid.bg-light.py-5.mb-5 {
-     padding-top: 8rem !important;
+     padding-top: 12rem !important;
    }
  }
  </style>
@@ -207,7 +216,7 @@
  </div>
  <!-- Topbar Start (Desktop) -->
  <div class="container-fluid bg-light d-none d-lg-block top-bar">
- <div class="row align-items-center py-4"> <!-- Increased padding for larger logo -->
+ <div class="row align-items-center">
  <div class="col-lg-6 text-center text-lg-start">
  <a href="index.html" class="navbar-brand m-0 p-0">
    <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img">
@@ -226,7 +235,7 @@
  <!-- Topbar End -->
  <!-- Navbar Start (Mobile + Menu) -->
  <div class="container-fluid nav-bar bg-light">
- <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+ <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-4">
  <a href="index.html" class="navbar-brand m-0 p-0 d-lg-none">
    <img src="claimlogo1.png" alt="Claim For Me Logo" class="img-fluid logo-img">
  </a>
