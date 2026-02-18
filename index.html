@@ -52,7 +52,7 @@
         .navbar-brand h1 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
-            font-size: 2.6rem !important;
+            font-size: 2.2rem !important;
             color: #355C7D !important;
             margin: 0;
         }
@@ -104,6 +104,30 @@
             border-top: 1px solid #DEE5ED;
             border-bottom: 1px solid #DEE5ED;
         }
+        /* FIXED COMPACT HEADER - does NOT scroll with the page */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .top-row { min-height: 62px !important; padding: 8px 0 4px !important; }
+        .topbar-phone { font-size: 1.55rem !important; }
+        .menu-row { padding: 0.15rem 0 !important; background-color: #f8f9fa; }
+        .menu-row .nav-link { padding: 0.3rem 1rem !important; font-size: 0.95rem; }
+        .hero-section { padding-top: 130px !important; }
+        @media (max-width: 991px) {
+            .top-row { min-height: 58px !important; padding: 6px 0 4px !important; }
+            .top-row .navbar-brand h1 { font-size: 1.7rem !important; }
+            .mobile-phone { font-size: 1.3rem !important; }
+            .hero-section { padding-top: 115px !important; }
+        }
+        @media (max-width: 576px) {
+            .top-row .navbar-brand h1 { font-size: 1.5rem !important; }
+            .mobile-phone { font-size: 1.15rem !important; }
+        }
         #introVideoModal { z-index: 9999 !important; }
         #introVideoModal .modal-backdrop { z-index: 9998 !important; background: rgba(0,0,0,0.95); }
         #introVideoModal .modal-content { background: transparent; border: none; height: 100vh; width: 100vw; border-radius: 0; }
@@ -116,68 +140,6 @@
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
         .modal-open .site-header { display: none !important; visibility: hidden !important; }
-        /* Header layout */
-        .site-header { background-color: #ffffff; }
-        .top-row { min-height: 80px; padding: 12px 0 8px; }
-        .menu-row {
-            background-color: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-            border-bottom: 1px solid #dee2e6;
-            padding: 0.25rem 0;
-        }
-        .menu-row .nav-link {
-            padding: 0.35rem 1rem;
-            font-size: 1rem;
-        }
-        /* Desktop phone number - restored large blue */
-        .topbar-phone {
-            font-size: 1.8rem !important;
-            font-weight: 800 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        .subtext {
-            font-size: 0.95rem;
-            color: #666;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        /* Mobile phone */
-        .mobile-phone {
-            font-size: 1.4rem !important;
-            font-weight: 700 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            text-decoration: none;
-        }
-        /* Hamburger visibility - force dark icon */
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
-        /* Mobile layout - phone top-right, hamburger below on right */
-        @media (max-width: 991px) {
-            .top-row { min-height: 70px; padding: 8px 0 4px; }
-            .top-row .row { align-items: flex-start; }
-            .top-row .navbar-brand h1 { font-size: 1.8rem !important; }
-            .tagline { font-size: 0.95rem !important; }
-            .mobile-phone { font-size: 1.35rem !important; margin-top: 2px; }
-            .right-mobile {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-start;
-                height: 100%;
-            }
-        }
-        @media (max-width: 576px) {
-            .top-row .navbar-brand h1 { font-size: 1.55rem !important; }
-            .tagline { font-size: 0.85rem !important; }
-            .mobile-phone { font-size: 1.2rem !important; }
-        }
-        /* Hero padding */
-        .hero-section { padding-top: 140px !important; }
-        @media (max-width: 991px) { .hero-section { padding-top: 110px !important; } }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -202,6 +164,14 @@
         </div>
     </div>
     <!-- Spinner End -->
+
+    <!-- Thank You Banner -->
+    <div id="thankyou-banner" class="alert alert-success text-center py-4 mb-0 d-none" style="border-radius: 0; font-size: 1.25rem; font-weight: bold;">
+        <div class="container">
+            ✅ Thank you! Your callback request has been received. We'll call you back as soon as possible.
+        </div>
+    </div>
+
     <!-- Intro Video Modal -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
@@ -219,14 +189,15 @@
             </div>
         </div>
     </div>
-    <!-- Header -->
-    <header class="sticky-top shadow-sm site-header">
+
+    <!-- FIXED COMPACT HEADER (does NOT scroll away) -->
+    <header class="site-header">
         <div class="top-row bg-white">
             <div class="container">
                 <div class="row align-items-start">
                     <div class="col-lg-8 col-6">
                         <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-label="Claim For Me Icon" class="me-3" style="width: 72px; height: auto; flex-shrink: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-label="Claim For Me Icon" class="me-3" style="width: 60px; height: auto; flex-shrink: 0;">
                                 <defs>
                                     <style>
                                         .navy{stroke:#233b5b; fill:none;}
@@ -948,26 +919,27 @@
         });
     </script>
 
-<!-- Zapier Form Redirect Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('claimform');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            fetch(this.action, {
-                method: 'POST',
-                body: formData
-            }).then(() => {
-                window.location.href = 'https://www.claimfor.me.uk/';
-            }).catch(() => {
-                window.location.href = 'https://www.claimfor.me.uk/';
+    <!-- Thank You Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('claimform');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData
+                }).then(() => {
+                    document.getElementById('thankyou-banner').classList.remove('d-none');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }).catch(() => {
+                    document.getElementById('thankyou-banner').classList.remove('d-none');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
             });
-        });
-    }
-});
-</script>
-
+        }
+    });
+    </script>
 </body>
 </html>
