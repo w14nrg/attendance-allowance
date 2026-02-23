@@ -9,6 +9,23 @@
   gtag('js', new Date());
   gtag('config', 'AW-17969840228');
 </script>
+ <!-- Google Ads Conversion Event Snippet -->
+ <script>
+  function gtag_report_conversion(url) {
+   var callback = function () {
+    if (typeof(url) != 'undefined') {
+     window.location = url;
+    }
+   };
+   gtag('event', 'conversion', {
+    'send_to': 'AW-17969840228/RJLWCMGnmP0bEOSA2PhC',
+    'value': 1.0,
+    'currency': 'GBP',
+    'event_callback': callback
+   });
+   return false;
+  }
+ </script>
  <!-- Meta Pixel Code -->
  <script>
  !function(f,b,e,v,n,t,s)
@@ -291,11 +308,11 @@
       </a>
      </div>
      <div class="col-lg-4 d-none d-lg-block text-end">
-      <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
+      <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="topbar-phone d-block text-decoration-none" style="color: inherit;">Freephone 0800 054 8484</a>
       <p class="mb-0 subtext">Call us anytime – it's free</p>
      </div>
      <div class="col-6 d-lg-none right-mobile">
-      <a href="tel:08000548484" class="mobile-phone d-block">0800 054 8484</a>
+      <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="mobile-phone d-block">0800 054 8484</a>
       <button class="navbar-toggler border-0 p-0 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -352,7 +369,7 @@
  <div class="container-fluid bg-light py-5 mb-5 hero-section">
   <div class="container text-center">
    <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
-   <p class="fs-4 fst-italic text-secondary mb-4">“Honest support. Better results.” – We help people over State Pension age claim Attendance Allowance, Pension Credit and Blue Badge — clearly, correctly and with care..</p>
+   <p class="fs-4 fst-italic text-secondary mb-4">“Honest support. Better results.” – We help people over State Pension age claim Attendance Allowance, Pension Credit and Blue Badge — clearly, correctly and with care.</p>
    <p class="fs-3 text-primary fw-bold mb-2">Success-based – no upfront costs</p>
    <div class="price-badge">Prices from £99</div>
    <p class="fs-5 mt-4">Choose a benefit below or from the menu above to start your free eligibility questionnaire</p>
@@ -428,7 +445,7 @@
       </div>
       <div class="ms-3">
        <p class="fs-5 fw-medium mb-2 text-white">Call our Freephone for Free Eligibility Check</p>
-       <h3 class="m-0 text-white fw-bold">0800 054 8484</h3>
+       <h3 class="m-0 text-white fw-bold"><a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" style="color:inherit; text-decoration:none;">0800 054 8484</a></h3>
       </div>
      </div>
     </div>
@@ -468,13 +485,13 @@
       <td>DWP / Institute for Fiscal Studies</td>
      </tr>
      <tr>
-      <td>Attendance Allowance – average weekly award (higher rate)</td>
-      <td>£108.55</td>
-      <td>GOV.UK 2025/26 rates</td>
+      <td>Attendance Allowance – higher rate weekly award (2025/26)</td>
+      <td>£110.40</td>
+      <td>GOV.UK April 2025</td>
      </tr>
      <tr>
       <td>Annual value of higher rate Attendance Allowance</td>
-      <td>£5,644.60</td>
+      <td>£5,741</td>
       <td>GOV.UK 2025/26</td>
      </tr>
      <tr>
@@ -726,7 +743,7 @@
    <div class="row g-5">
     <div class="col-lg-3 col-md-6">
      <h4 class="mb-4">Contact Claim For Me</h4>
-     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><strong>Freephone 0800 054 8484</strong> – Call for Attendance Allowance & Pension Credit Help</p>
+     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><strong><a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" style="color:inherit;">Freephone 0800 054 8484</a></strong> – Call for Attendance Allowance & Pension Credit Help</p>
     </div>
     <div class="col-lg-3 col-md-6">
      <h4 class="mb-4">Opening Hours - Benefits Claim Support</h4>
@@ -807,18 +824,16 @@
   }
  });
  </script>
- <!-- FIXED Thank You Script - This is the one that now works perfectly -->
+ <!-- FIXED Thank You Script -->
  <script>
  const form = document.getElementById('claimform');
  if (form) {
   form.addEventListener('submit', function(e) {
-   // Respect all required fields
    if (!this.checkValidity()) {
     this.reportValidity();
     return;
    }
    e.preventDefault();
-   // Loading state on button
    const submitBtn = this.querySelector('button[type="submit"]');
    const originalText = submitBtn.innerHTML;
    submitBtn.disabled = true;
@@ -829,13 +844,21 @@
     body: formData
    })
    .then(() => {
-    // Show banner + clear form + scroll to top
+    gtag('event', 'conversion', {
+     'send_to': 'AW-17969840228/RJLWCMGnmP0bEOSA2PhC',
+     'value': 1.0,
+     'currency': 'GBP'
+    });
     document.getElementById('thankyou-banner').classList.remove('d-none');
     this.reset();
     window.scrollTo({ top: 0, behavior: 'smooth' });
    })
    .catch(() => {
-    // Still show success (lead is already in Monday)
+    gtag('event', 'conversion', {
+     'send_to': 'AW-17969840228/RJLWCMGnmP0bEOSA2PhC',
+     'value': 1.0,
+     'currency': 'GBP'
+    });
     document.getElementById('thankyou-banner').classList.remove('d-none');
     this.reset();
     window.scrollTo({ top: 0, behavior: 'smooth' });
